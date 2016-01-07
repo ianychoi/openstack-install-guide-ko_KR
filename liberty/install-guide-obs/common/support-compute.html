@@ -1,0 +1,590 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+
+    <title>OpenStack Docs: Troubleshoot Compute</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="../_static/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Pygments CSS -->
+<link href="../_static/css/native.css" rel="stylesheet">
+
+<!-- Fonts -->
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+
+<!-- Custom CSS -->
+<link href="../_static/css/combined.css" rel="stylesheet">
+<link href="../_static/css/styles.css" rel="stylesheet">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+  
+
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-17511903-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+  </head>
+  <body>
+<nav class="navbar navbar-default inner" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="brand-wrapper">
+        <a class="navbar-brand" href="/"></a>
+      </div>
+      <div class="search-icon show"><i class="fa fa-search"></i> Search</div></div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="search-container tiny">
+        <div id="gcse">
+          <script type="text/javascript">
+(function() {
+  var cx = '000108871792296872333:noj9nikm74i';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//www.google.com/cse/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();
+          </script>
+          <gcse:search gname="standard"></gcse:search>
+        </div>
+        <i class="fa fa-times close-search"></i>
+      </div>
+      <ul class="nav navbar-nav navbar-main show">
+        <li>
+          <div id="gcse-mobile">
+            <gcse:search gname="mobile"></gcse:search>
+          </div>
+        </li>
+        <li>
+          <a href="http://www.openstack.org/software/" class="drop" id="dropdownMenuSoftware">Software <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuSoftware">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.openstack.org/software/">Overview</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.openstack.org/software/openstack-compute/">Compute</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.openstack.org/software/openstack-storage/">Storage</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.openstack.org/software/openstack-networking/">Networking</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.openstack.org/software/openstack-dashboard/">Dashboard</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.openstack.org/software/openstack-shared-services/">Shared Services</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.openstack.org/software/start/">Get Started</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="http://www.openstack.org/user-stories/" class="drop" id="dropdownMenuUsers">Users <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuUsers">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.openstack.org/user-stories/">Overview</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.openstack.org/appdev/">Application Developers</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.openstack.org/enterprise/">OpenStack in the Enterprise</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://superuser.openstack.org/">Superuser Magazine</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="http://www.openstack.org/community/" class="drop" id="dropdownMenuCommunity">Community <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuCommunity">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.openstack.org/community/">Welcome! Start Here</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="//ask.openstack.org/">Ask A Technical Question</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="//wiki.openstack.org/wiki/Main_Page">OpenStack Wiki</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="//www.openstack.org/community/events/">Community Events</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.openstack.org/foundation/">Openstack Foundation</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="//wiki.openstack.org/wiki/Getting_The_Code">Source Code</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="//www.openstack.org/foundation/companies/">Supporting Companies</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="//www.openstack.org/community/jobs/">Jobs</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="//www.openstack.org/join/">Join The Community</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="http://www.openstack.org/marketplace/">Marketplace</a>
+        </li>
+        <li>
+          <a href="http://www.openstack.org/events/" class="drop" id="dropdownMenuEvents">Events <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuEvents">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="//www.openstack.org/community/events/">Overview</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/summit/">The OpenStack Summit</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="//www.openstack.org/community/events/">More OpenStack Events</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="http://www.openstack.org/blog/">Blog</a>
+        </li>
+        <li>
+          <a href="http://docs.openstack.org/">Docs</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="container docs-book-wrapper">
+      <div class="row">
+        <div class="col-lg-9 col-md-8 col-sm-8 col-lg-push-3 col-md-push-4 col-sm-push-4">
+<div class="row">
+  <div class="col-lg-8">
+    <h2>Troubleshoot Compute</h2>
+  </div>
+  <div class="docs-actions">
+    
+    
+    <a id="logABugLink1" href="" target="_blank" title="Found an error? Report a bug against this page"><i class="fa fa-bug" data-toggle="tooltip" data-placement="top" title="Report a Bug"></i></a>
+  </div>
+</div>
+          <div class="row docs-byline">
+            <div class="docs-updated">updated: 2016-01-07 13:17</div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="docs-top-contents">
+                <h5><a href="../index.html">Contents</a></h5>
+                <ul>
+<li><a class="reference internal" href="#">Troubleshoot Compute</a><ul>
+<li><a class="reference internal" href="#compute-service-logging">Compute 서비스 로깅</a></li>
+<li><a class="reference internal" href="#guru-meditation-reports">Guru Meditation reports</a></li>
+<li><a class="reference internal" href="#common-errors-and-fixes-for-compute">Common errors and fixes for Compute</a></li>
+<li><a class="reference internal" href="#reset-the-state-of-an-instance">인스턴스 상태 리셋</a></li>
+<li><a class="reference internal" href="#injection-problems">Injection problems</a></li>
+<li><a class="reference internal" href="#disable-live-snapshotting">라이브 Snapshotting 비활성화</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+              <div class="docs-body">
+
+  <div class="section" id="troubleshoot-compute">
+<span id="support-compute"></span><h1>Troubleshoot Compute<a class="headerlink" href="#troubleshoot-compute" title="제목 주소">¶</a></h1>
+<p>Common problems for Compute typically involve misconfigured
+networking or credentials that are not sourced properly in the
+environment. Also, most flat networking configurations do not
+enable <strong class="command">ping</strong> or <strong class="command">ssh</strong> from a compute node
+to the instances that run on that node. Another common problem
+is trying to run 32-bit images on a 64-bit compute node.
+This section shows you how to troubleshoot Compute.</p>
+<div class="section" id="compute-service-logging">
+<span id="log-files-for-openstack-compute"></span><h2>Compute 서비스 로깅<a class="headerlink" href="#compute-service-logging" title="제목 주소">¶</a></h2>
+<p>Compute stores a log file for each service in
+<code class="docutils literal"><span class="pre">/var/log/nova</span></code>. For example, <code class="docutils literal"><span class="pre">nova-compute.log</span></code>
+is the log for the <code class="docutils literal"><span class="pre">nova-compute</span></code> service. You can set the
+following options to format log strings for the <code class="docutils literal"><span class="pre">nova.log</span></code>
+module in the <code class="docutils literal"><span class="pre">nova.conf</span></code> file:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">logging_context_format_string</span></code></li>
+<li><code class="docutils literal"><span class="pre">logging_default_format_string</span></code></li>
+</ul>
+<p>If the log level is set to <code class="docutils literal"><span class="pre">debug</span></code>, you can also specify
+<code class="docutils literal"><span class="pre">logging_debug_format_suffix</span></code> to append extra formatting.
+For information about what variables are available for the
+formatter see <a class="reference external" href="http://docs.python.org/library/logging.html#formatter-objects">http://docs.python.org/library/logging.html#formatter-objects</a>.</p>
+<p>You have two options for logging for OpenStack Compute based on
+configuration settings. In <code class="docutils literal"><span class="pre">nova.conf</span></code>, include the
+<code class="docutils literal"><span class="pre">logfile</span></code> option to enable logging. Alternatively you can set
+<code class="docutils literal"><span class="pre">use_syslog</span> <span class="pre">=</span> <span class="pre">1</span></code> so that the nova daemon logs to syslog.</p>
+</div>
+<div class="section" id="guru-meditation-reports">
+<span id="section-compute-gurumed-reports"></span><h2>Guru Meditation reports<a class="headerlink" href="#guru-meditation-reports" title="제목 주소">¶</a></h2>
+<p>A Guru Meditation report is sent by the Compute service upon receipt of the
+<code class="docutils literal"><span class="pre">SIGUSR1</span></code> signal. This report is a general-purpose error report,
+including a complete report of the service&#8217;s current state, and is sent to
+<code class="docutils literal"><span class="pre">stderr</span></code>.</p>
+<p>For example, if you redirect error output to <code class="docutils literal"><span class="pre">nova-api-err.log</span></code>
+using <strong class="command">nova-api 2&gt;/var/log/nova/nova-api-err.log</strong>,
+resulting in the process ID 8675, you can then run:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">#</span> <span class="nb">kill</span> -USR1 8675
+</pre></div>
+</div>
+<p>This command triggers the Guru Meditation report to be printed to
+<code class="docutils literal"><span class="pre">/var/log/nova/nova-api-err.log</span></code>.</p>
+<p>The report has the following sections:</p>
+<ul class="simple">
+<li>Package: Displays information about the package to which the process
+belongs, including version information.</li>
+<li>Threads: Displays stack traces and thread IDs for each of the threads
+within the process.</li>
+<li>Green Threads: Displays stack traces for each of the green threads
+within the process (green threads do not have thread IDs).</li>
+<li>Configuration: Lists all configuration options currently accessible
+through the CONF object for the current process.</li>
+</ul>
+<p>For more information, see <a class="reference external" href="http://docs.openstack.org/developer/nova/devref/gmr.html">Guru Meditation Reports</a>.</p>
+</div>
+<div class="section" id="common-errors-and-fixes-for-compute">
+<span id="compute-common-errors-and-fixes"></span><h2>Common errors and fixes for Compute<a class="headerlink" href="#common-errors-and-fixes-for-compute" title="제목 주소">¶</a></h2>
+<p>The <a class="reference external" href="http://ask.openstack.org">ask.openstack.org</a> site offers a place to ask
+and answer questions, and you can also mark questions as frequently asked
+questions. This section describes some errors people have posted previously.
+Bugs are constantly being fixed, so online resources are a great way to get
+the most up-to-date errors and fixes.</p>
+<p><strong>Credential errors, 401, and 403 forbidden errors</strong></p>
+<p>Missing credentials cause a <code class="docutils literal"><span class="pre">403</span> <span class="pre">forbidden</span></code> error. To resolve
+this issue, use one of these methods:</p>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt>수동 방식</dt>
+<dd><p class="first last">Gets the <code class="docutils literal"><span class="pre">novarc</span></code> file from the project ZIP file, saves existing
+credentials in case of override, and manually sources the <code class="docutils literal"><span class="pre">novarc</span></code>
+file.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>스크립트 방식</dt>
+<dd><p class="first last">Generates <code class="docutils literal"><span class="pre">novarc</span></code> from the project ZIP file and sources it for you.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<p>When you run <code class="docutils literal"><span class="pre">nova-api</span></code> the first time, it generates the certificate
+authority information, including <code class="docutils literal"><span class="pre">openssl.cnf</span></code>. If you
+start the CA services before this, you might not be
+able to create your ZIP file. Restart the services.
+When your CA information is available, create your ZIP file.</p>
+<p>Also, check your HTTP proxy settings to see whether they cause problems with
+<code class="docutils literal"><span class="pre">novarc</span></code> creation.</p>
+<p><strong>인스턴스 오류</strong></p>
+<p>Sometimes a particular instance shows <code class="docutils literal"><span class="pre">pending</span></code> or you cannot SSH to
+it. Sometimes the image itself is the problem. For example, when you
+use flat manager networking, you do not have a DHCP server and certain
+images do not support interface injection; you cannot connect to
+them. The fix for this problem is to use an image that does support
+this method, such as Ubuntu, which obtains an IP address correctly
+with FlatManager network settings.</p>
+<p>To troubleshoot other possible problems with an instance, such as
+an instance that stays in a spawning state, check the directory for
+the particular instance under <code class="docutils literal"><span class="pre">/var/lib/nova/instances</span></code> on
+the <code class="docutils literal"><span class="pre">nova-compute</span></code> host and make sure that these files are present:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">libvirt.xml</span></code></li>
+<li><code class="docutils literal"><span class="pre">disk</span></code></li>
+<li><code class="docutils literal"><span class="pre">disk-raw</span></code></li>
+<li><code class="docutils literal"><span class="pre">kernel</span></code></li>
+<li><code class="docutils literal"><span class="pre">ramdisk</span></code></li>
+<li><p class="first"><code class="docutils literal"><span class="pre">console.log</span></code> 는 인스턴스 시작후 부터 쌓입니다.</p>
+</li>
+</ul>
+<p>If any files are missing, empty, or very small, the <code class="docutils literal"><span class="pre">nova-compute</span></code>
+service did not successfully download the images from the Image service.</p>
+<p>Also check <code class="docutils literal"><span class="pre">nova-compute.log</span></code> for exceptions. Sometimes they do not
+appear in the console output.</p>
+<p>Next, check the log file for the instance in the <code class="docutils literal"><span class="pre">/var/log/libvirt/qemu</span></code>
+directory to see if it exists and has any useful error messages in it.</p>
+<p>Finally, from the <code class="docutils literal"><span class="pre">/var/lib/nova/instances</span></code> directory for the instance,
+see if this command returns an error:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">#</span> virsh create libvirt.xml
+</pre></div>
+</div>
+<p><strong>리눅스 인스턴스에서 빈 로그가 출력된다면</strong></p>
+<p>You can view the log output of running instances
+from either the <em class="guilabel">Log</em> tab of the dashboard or the output of
+<strong class="command">nova console-log</strong>. In some cases, the log output of a running
+Linux instance will be empty or only display a single character (for example,
+the <cite>?</cite> character).</p>
+<p>This occurs when the Compute service attempts to retrieve the log output
+of the instance via a serial console while the instance itself is not
+configured to send output to the console. To rectify this, append the
+following parameters to kernel arguments specified in the instance&#8217;s boot
+loader:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="na">console</span><span class="o">=</span><span class="s">tty0 console=ttyS0,115200n8</span>
+</pre></div>
+</div>
+<p>Upon rebooting, the instance will be configured to send output to the Compute
+service.</p>
+</div>
+<div class="section" id="reset-the-state-of-an-instance">
+<span id="reset-state"></span><h2>인스턴스 상태 리셋<a class="headerlink" href="#reset-the-state-of-an-instance" title="제목 주소">¶</a></h2>
+<p>If an instance remains in an intermediate state, such as <code class="docutils literal"><span class="pre">deleting</span></code>, you
+can use the <strong class="command">nova reset-state</strong> command to manually reset the state
+of an instance to an error state. You can then delete the instance. For
+example:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> nova reset-state c6bbbf26-b40a-47e7-8d5c-eb17bf65c485
+<span class="gp">$</span> nova delete c6bbbf26-b40a-47e7-8d5c-eb17bf65c485
+</pre></div>
+</div>
+<p>You can also use the <code class="xref std std-option docutils literal"><span class="pre">--active</span></code> parameter to force the instance back
+to an active state instead of an error state. For example:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> nova reset-state --active c6bbbf26-b40a-47e7-8d5c-eb17bf65c485
+</pre></div>
+</div>
+</div>
+<div class="section" id="injection-problems">
+<span id="problems-with-injection"></span><h2>Injection problems<a class="headerlink" href="#injection-problems" title="제목 주소">¶</a></h2>
+<p>If instances do not boot or boot slowly, investigate file injection as a cause.</p>
+<p>To disable injection in libvirt, set the following in <code class="docutils literal"><span class="pre">nova.conf</span></code>:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="k">[libvirt]</span>
+<span class="na">inject_partition</span> <span class="o">=</span> <span class="s">-2</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">주석</p>
+<p class="last">If you have not enabled the configuration drive and
+you want to make user-specified files available from
+the metadata server for to improve performance and
+avoid boot failure if injection fails, you must
+disable injection.</p>
+</div>
+</div>
+<div class="section" id="disable-live-snapshotting">
+<span id="live-snapshotting-fail"></span><h2>라이브 Snapshotting 비활성화<a class="headerlink" href="#disable-live-snapshotting" title="제목 주소">¶</a></h2>
+<p>If you use libvirt version <code class="docutils literal"><span class="pre">1.2.2</span></code>, you may experience problems with live
+snapshots creation. Occasionally, libvirt of the specified version fails
+to perform the live snapshotting under load that presupposes a concurrent
+creation of multiple snapshots.</p>
+<p>To effectively disable the libvirt live snapshotting, until the problem
+is resolved, configure the <code class="docutils literal"><span class="pre">disable_libvirt_livesnapshot</span></code> option.
+You can turn off the live snapshotting mechanism by setting up its value to
+<code class="docutils literal"><span class="pre">True</span></code> in the <code class="docutils literal"><span class="pre">[workarounds]</span></code> section of the <code class="docutils literal"><span class="pre">nova.conf</span></code> file:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="k">[workarounds]</span>
+<span class="na">disable_libvirt_livesnapshot</span> <span class="o">=</span> <span class="s">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+              </div>
+            </div>
+          </div>
+          <div class="docs-actions">
+          
+          
+            <a id="logABugLink3" href="" target="_blank" title="Found an error? Report a bug against this page"><i class="fa fa-bug" data-toggle="tooltip" data-placement="top" title="Report a Bug"></i></a>
+          </div>
+          <div class="row docs-byline bottom">
+            <div class="docs-updated">updated: 2016-01-07 13:17</div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 docs-license">
+<a href="https://creativecommons.org/licenses/by/3.0/">
+ <img src="../_static/images/docs/license.png" alt="Creative Commons Attribution 3.0 License"/>
+</a>
+<p>
+ Except where otherwise noted, this document is licensed under
+ <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons
+ Attribution 3.0 License</a>. See all <a href="http://www.openstack.org/legal">
+ OpenStack Legal Documents</a>.
+</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 docs-actions-wrapper">
+            <!-- ID buglinkbottom added so that pre-filled doc bugs
+                 are sent to Launchpad projects related to the document -->
+              <a href="#" id="logABugLink2" class="docs-footer-actions"><i class="fa fa-bug"></i> found an error? report a bug</a>
+              <a href="http://ask.openstack.org" class="docs-footer-actions"><i class="fa fa-question-circle"></i> questions?</a>
+            </div>
+          </div>
+        </div>
+<div class="col-lg-3 col-md-4 col-sm-4 col-lg-pull-9 col-md-pull-8 col-sm-pull-8 docs-sidebar">
+  <div class="search-icon show">
+    <i class="fa fa-search"></i> Search
+  </div>
+  <div class="btn-group docs-sidebar-releases">
+    <button onclick="location.href='/'" class="btn docs-sidebar-home" data-toggle="tooltip" data-placement="top" title="Docs Home"><i class="fa fa-arrow-circle-o-left"></i></button>
+    <button href="#" type="button" data-toggle="dropdown" class="btn docs-sidebar-release-select">Release: Liberty (October 2015)<i class="fa fa-caret-down"></i></button>
+    <ul class="dropdown-menu docs-sidebar-dropdown" role="menu" aria-labelledby="dLabel">
+      <li role="presentation" class="dropdown-header">Guides</li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="http://docs.openstack.org/index.html#install-guides">Install Guides</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="http://docs.openstack.org/index.html#user-guides">User Guides</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="http://docs.openstack.org/index.html#configuration-guides">Configuration Guides</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="http://docs.openstack.org/index.html#ops-and-admin-guides">Operations And Administration Guides</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="http://docs.openstack.org/index.html#api-guides">API Guides</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="http://docs.openstack.org/index.html#contributor-guides">Contributor Guides</a></li>
+      <li role="presentation" class="dropdown-header">Releases</li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="/liberty/">Liberty (current release)</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="/kilo/">Kilo (April 2015)</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="/juno/">Juno (October 2014)</a></li>
+      <li role="presentation" class="dropdown-header">Languages</li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ja/">日本語 (Japanese)</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="/de/">Deutsch (German)</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="/fr/">Français (French)</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="/pt_BR/">Português (Portuguese)</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="/zh_CN/">简体中文 (Simplified Chinese)</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ko_KR/">한국어 (Korean)</a></li>
+    </ul>
+  </div>
+  <div class="docs-sidebar-toc">
+    <div class="docs-sidebar-section" id="table-of-contents">
+      <a href="../index.html" class="docs-sidebar-section-title"><h4>내용</h4></a>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="conventions.html">통용 규칙</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">개요</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../environment.html">환경</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../keystone.html">Identity 서비스 추가</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glance.html">이미지 서비스 추가</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nova.html">Compute 서비스 추가</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../neutron.html">네트워킹 서비스 추가</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../horizon.html">대시보드 추가</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cinder.html">블록 스토리지 서비스 추가</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../swift.html">오브젝트 스토리지 서비스 추가</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../heat.html">Orchestration 서비스 추가</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ceilometer.html">Telemetry 서비스 추가</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../launch-instance.html">인스턴스 실행</a></li>
+<li class="toctree-l1"><a class="reference internal" href="app_support.html">커뮤니티 지원</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+<footer>
+  <div class="container">
+    <div class="row footer-links">
+      <div class="col-lg-2 col-sm-2">
+        <h3>OpenStack</h3>
+        <ul>
+          <li><a href="/foundation">About the Foundation</a></li>
+          <li><a href="http://openstack.org/projects/">Projects</a></li>
+          <li><a href="http://openstack.org/projects/openstack-security/">OpenStack Security</a></li>
+          <li><a href="http://openstack.org/projects/openstack-faq/">Common Questions</a></li>
+          <li><a href="http://openstack.org/blog/">Blog</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-sm-2">
+        <h3>Community</h3>
+        <ul>
+          <li><a href="http://openstack.org/community/">User Groups</a></li>
+          <li><a href="http://openstack.org/community/events/">Events</a></li>
+          <li><a href="http://openstack.org/community/jobs/">Jobs</a></li>
+          <li><a href="http://openstack.org/foundation/companies/">Companies</a></li>
+          <li><a href="https://wiki.openstack.org/wiki/How_To_Contribute">Contribute</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-sm-2">
+        <h3>Documentation</h3>
+        <ul>
+          <li><a href="http://docs.openstack.org">OpenStack Manuals</a></li>
+          <li><a href="http://openstack.org/software/start/">Getting Started</a></li>
+          <li><a href="http://developer.openstack.org">API Documentation</a></li>
+          <li><a href="https://wiki.openstack.org">Wiki</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-sm-2">
+        <h3>Branding & Legal</h3>
+        <ul>
+          <li><a href="http://openstack.org/brand/">Logos & Guidelines</a></li>
+          <li><a href="http://openstack.org/brand/openstack-trademark-policy/">Trademark Policy</a></li>
+          <li><a href="http://openstack.org/privacy/">Privacy Policy</a></li>
+          <li><a href="https://wiki.openstack.org/wiki/How_To_Contribute#Contributor_License_Agreement">OpenStack CLA</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-sm-4">
+        <h3>Stay In Touch</h3>
+        <a href="https://twitter.com/OpenStack" target="_blank" class="social-icons footer-twitter"></a>
+        <a href="https://www.facebook.com/openstack" target="_blank" class="social-icons footer-facebook"></a>
+        <a href="https://www.linkedin.com/company/openstack" target="_blank" class="social-icons footer-linkedin"></a>
+        <a href="https://www.youtube.com/user/OpenStackFoundation" target="_blank" class="social-icons footer-youtube"></a>
+        <p class="fine-print">
+          The OpenStack project is provided under the
+          <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license</a>. Openstack.org is powered by
+          <a href="http://rackspace.com" target="_blank">Rackspace Cloud Computing</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <div class="container">
+    <form class="form-inline" id="FeedbackForm_FeedbackForm" action="/home/FeedbackForm" method="post" enctype="application/x-www-form-urlencoded">
+      <div class="form-group">
+        <div>
+          <input class="feedback-input" type="input" placeholder="Give Us Your Feedback On This Page">
+          <button type="submit" class="feedback-btn">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- jQuery -->
+<script type="text/javascript" src="../_static/js/jquery-1.11.3.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script type="text/javascript" src="../_static/js/bootstrap.min.js"></script>
+
+<!-- The rest of the JS -->
+<script type="text/javascript" src="../_static/js/navigation.js"></script>
+
+<!-- Docs JS -->
+<script type="text/javascript" src="../_static/js/docs.js"></script>
+
+<!-- Popovers -->
+<script type="text/javascript" src="../_static/js/webui-popover.js"></script>
+
+<!-- Javascript for page -->
+<script language="JavaScript">
+/* build a description of this page including SHA, source location on git repo,
+   build time and the project's launchpad bug tag. Set the HREF of the bug
+   buttons */
+
+    var lineFeed = "%0A";
+    var gitURL = "Source: Can't derive source file URL";
+
+    /* there have been cases where "pagename" wasn't set; better check for it */
+        /* The URL of the source file on Git is based on the giturl variable
+           in conf.py, which must be manually initialized to the source file
+           URL in Git.
+           "pagename" is a standard sphinx parameter containing the name of
+           the source file, without extension.                             */
+
+        var sourceFile = "common/support-compute" + ".rst";
+        gitURL = "Source: http://git.openstack.org/cgit/openstack/openstack-manuals/tree/doc/install-guide/source" + "/" + sourceFile;
+
+    /* gitsha, project and bug_tag rely on variables in conf.py */
+    var gitSha = "SHA: a1cd3a0e8f503343af4bc28a5e07dad22fa92b4e";
+        var bugProject = "openstack-manuals";
+    var bugTitle = "Troubleshoot Compute in Installation Guide";
+    var fieldTags = "install-guide";
+
+    /* "last_updated" is the build date and time. It relies on the
+       conf.py variable "html_last_updated_fmt", which should include
+       year/month/day as well as hours and minutes                   */
+    var buildstring = "Release: 0.1 on 2016-01-07 13:17";
+
+    var fieldComment = encodeURI(buildstring) +
+                       lineFeed + encodeURI(gitSha) +
+                       lineFeed + encodeURI(gitURL) ;
+
+    logABug(bugTitle, bugProject, fieldComment, fieldTags);
+</script>
+
+<!-- Javascript for search boxes (both sidebar and top nav) -->
+<script type="text/javascript">
+(function() {
+var cx = '000108871792296872333:noj9nikm74i';
+var gcse = document.createElement('script');
+gcse.type = 'text/javascript';
+gcse.async = true;
+gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+'//www.google.com/cse/cse.js?cx=' + cx;
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(gcse, s);
+})();
+</script>
+  </body>
+</html>
