@@ -9,18 +9,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Bootstrap CSS -->
-<link href="_static/css/bootstrap.min.css" rel="stylesheet">
+<link href="../static/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Pygments CSS -->
-<link href="_static/css/native.css" rel="stylesheet">
+<link href="../static/css/native.css" rel="stylesheet">
 
 <!-- Fonts -->
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 
 <!-- Custom CSS -->
-<link href="_static/css/combined.css" rel="stylesheet">
-<link href="_static/css/styles.css" rel="stylesheet">
+<link href="../static/css/combined.css" rel="stylesheet">
+<link href="../static/css/styles.css" rel="stylesheet">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -180,7 +180,7 @@ ga('send', 'pageview');
 <p>각 노드에 배포하고자 선택한 아키텍처에 대한 운영체제를 설치한 이후에는, 네트워크 인터페이스를 구성해야 합니다. 대상 배포판에서 자동으로 네트워크를 관리하는 도구를 비활성화하고 구성 파일에 적합하게 수동으로 편집할 것을 권장합니다. 배포판에 따른 네트워크 구성 방법에 대한 자세한 정보는 <a class="reference external" href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Networking_Guide/sec-Using_the_Command_Line_Interface.html">문서</a> 를 참고합니다.</p>
 <p>모든 노드에는 패키지 설치, 보안 업데이트, <a class="reference internal" href="common/glossary.html#term-dns"><em class="xref std std-term">DNS</em></a> 및 <a class="reference internal" href="common/glossary.html#term-ntp"><em class="xref std std-term">NTP</em></a> 등의 관리 목적을 위한 인터넷 액세스를 필요로 합니다. 대부분의 경우에, 노드들은 관리 네트워크 인터페이스를 통하여 인터넷 액세스를 얻습니다. 네트워크 분리의 중요성을 강조하기 위해, 예제 아키텍처에서는 <a class="reference external" href="https://tools.ietf.org/html/rfc1918">사설 주소 공간</a> 를 관리 네트워크에 대해 사용하고, 물리 네트워크 인프라에서는 <em class="xref std std-term">NAT`또는 다른 방법을 통해 인터넥 액세스를 제공한다고 가정합니다. 예제 아키텍처는 공용 네트워크로 라우팅이 가능한 IP 주소 영역을 사용하며, 물리 네트워크 인프라에서 직접적인 인터넥 액세스를 제공한다고 가정합니다. 프로바이더 네트워크 아키텍처에서는, 모든 인스턴스들이 공용 네트워크에 직접적으로 연결됩니다. 셀프 서비스 네트워크 아키텍처에서는, 인스턴스들이 사설 또는 공용 네트워크에 연결될 수 있습니다. 사설 네트워크는 OpenStack 내에 있을 수 있으며, 또는 :term:`NAT</em> 를 사용한 공용 네트워크에 대한 액세스의 일정 레벨을 제공할 수 있습니다.</p>
 <div class="figure" id="figure-networklayout">
-<img alt="Network layout" src="_images/networklayout.png" />
+<img alt="Network layout" src="../images/networklayout.png" />
 </div>
 <p>예제 아키텍처에서는 다음 네트워크를 사용한다고 가정합니다:</p>
 <ul>
@@ -232,7 +232,7 @@ ga('send', 'pageview');
           <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-8 docs-license">
 <a href="https://creativecommons.org/licenses/by/3.0/">
- <img src="_static/images/docs/license.png" alt="Creative Commons Attribution 3.0 License"/>
+ <img src="../static/images/docs/license.png" alt="Creative Commons Attribution 3.0 License"/>
 </a>
 <p>
  Except where otherwise noted, this document is licensed under
@@ -381,19 +381,19 @@ ga('send', 'pageview');
   </div>
 </div>
 <!-- jQuery -->
-<script type="text/javascript" src="_static/js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="../static/js/jquery-1.11.3.js"></script>
 
 <!-- Bootstrap JavaScript -->
-<script type="text/javascript" src="_static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
 
 <!-- The rest of the JS -->
-<script type="text/javascript" src="_static/js/navigation.js"></script>
+<script type="text/javascript" src="../static/js/navigation.js"></script>
 
 <!-- Docs JS -->
-<script type="text/javascript" src="_static/js/docs.js"></script>
+<script type="text/javascript" src="../static/js/docs.js"></script>
 
 <!-- Popovers -->
-<script type="text/javascript" src="_static/js/webui-popover.js"></script>
+<script type="text/javascript" src="../static/js/webui-popover.js"></script>
 
 <!-- Javascript for page -->
 <script language="JavaScript">

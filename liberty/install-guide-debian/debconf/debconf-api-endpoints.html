@@ -9,18 +9,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Bootstrap CSS -->
-<link href="../_static/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../static/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Pygments CSS -->
-<link href="../_static/css/native.css" rel="stylesheet">
+<link href="../../static/css/native.css" rel="stylesheet">
 
 <!-- Fonts -->
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 
 <!-- Custom CSS -->
-<link href="../_static/css/combined.css" rel="stylesheet">
-<link href="../_static/css/styles.css" rel="stylesheet">
+<link href="../../static/css/combined.css" rel="stylesheet">
+<link href="../../static/css/styles.css" rel="stylesheet">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -183,28 +183,28 @@ ga('send', 'pageview');
 <p class="last"><code class="docutils literal"><span class="pre">heat-api</span></code> 패키지가 아닌 <code class="docutils literal"><span class="pre">heat-common</span></code> 가 Orchestration 서비스를 구성합니다.</p>
 </div>
 <p>API 서비스를 위한 패키지를 설치할 때, 그 서비스를  즉시 등록하려고 할 것 입니다. 하지만, API 서비스를 위한 패키지를 설치하거나 업그레이드 한 후에,  데비안은 이러한 응답을 debconf 데이터베이스에서 즉시 지우려고 할 것입니다. 결론적으로, Identity 서비스에 다시 등록을 하려고 할 것 입니다. 이미 API 서비스를 등록 했다면,  업그레이드 할 때  <code class="docutils literal"><span class="pre">no</span></code> 로 응답합니다.</p>
-<img alt="../_images/api-endpoint_1_register_endpoint.png" src="../_images/api-endpoint_1_register_endpoint.png" />
+<img alt="../../images/api-endpoint_1_register_endpoint.png" src="../../images/api-endpoint_1_register_endpoint.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <p>이 화면은 Identity 서비스 카탈로그에 패키지로 등록합니다.</p>
-<img alt="../_images/api-endpoint_2_keystone_server_ip.png" src="../_images/api-endpoint_2_keystone_server_ip.png" />
+<img alt="../../images/api-endpoint_2_keystone_server_ip.png" src="../../images/api-endpoint_2_keystone_server_ip.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <p>Identity 서비스 <code class="docutils literal"><span class="pre">admin_token</span></code> 값에 대한 프롬프트에 있을 것입니다. Identity 서비스는 해당 값을 사용하여 API 서비스에 등록합니다. <code class="docutils literal"><span class="pre">keystone</span></code> 패키지를 셋업하는 경우, 해당 값은 자동으로 구성됩니다.</p>
-<img alt="../_images/api-endpoint_3_keystone_authtoken.png" src="../_images/api-endpoint_3_keystone_authtoken.png" />
+<img alt="../../images/api-endpoint_3_keystone_authtoken.png" src="../../images/api-endpoint_3_keystone_authtoken.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <p>이 화면은 서비스를 위해서 IP 주소를 설정합니다. 이 설정 스크립트는 기본 경로 (<code class="docutils literal"><span class="pre">/sbin/route</span></code> 와 <code class="docutils literal"><span class="pre">/sbin/ip</span></code>)  에 연결된 인터페이스에서 사용된 IP주소를 자동적으로 감지합니다.</p>
 <p>만약 단독의 네트워크를 가지고 있지 않다면,  <strong>ENTER</strong> 를 누르세요.</p>
-<img alt="../_images/api-endpoint_4_service_endpoint_ip_address.png" src="../_images/api-endpoint_4_service_endpoint_ip_address.png" />
+<img alt="../../images/api-endpoint_4_service_endpoint_ip_address.png" src="../../images/api-endpoint_4_service_endpoint_ip_address.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <p>이 화면은  <code class="docutils literal"><span class="pre">us-east-coast</span></code> or <code class="docutils literal"><span class="pre">europe-paris</span></code> 와 같이 서비스의 지역명을 설정합니다.</p>
-<img alt="../_images/api-endpoint_5_region_name.png" src="../_images/api-endpoint_5_region_name.png" />
+<img alt="../../images/api-endpoint_5_region_name.png" src="../../images/api-endpoint_5_region_name.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -243,7 +243,7 @@ keystone --os-token ${AUTH_TOKEN} \
           <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-8 docs-license">
 <a href="https://creativecommons.org/licenses/by/3.0/">
- <img src="../_static/images/docs/license.png" alt="Creative Commons Attribution 3.0 License"/>
+ <img src="../../static/images/docs/license.png" alt="Creative Commons Attribution 3.0 License"/>
 </a>
 <p>
  Except where otherwise noted, this document is licensed under
@@ -391,19 +391,19 @@ keystone --os-token ${AUTH_TOKEN} \
   </div>
 </div>
 <!-- jQuery -->
-<script type="text/javascript" src="../_static/js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="../../static/js/jquery-1.11.3.js"></script>
 
 <!-- Bootstrap JavaScript -->
-<script type="text/javascript" src="../_static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../static/js/bootstrap.min.js"></script>
 
 <!-- The rest of the JS -->
-<script type="text/javascript" src="../_static/js/navigation.js"></script>
+<script type="text/javascript" src="../../static/js/navigation.js"></script>
 
 <!-- Docs JS -->
-<script type="text/javascript" src="../_static/js/docs.js"></script>
+<script type="text/javascript" src="../../static/js/docs.js"></script>
 
 <!-- Popovers -->
-<script type="text/javascript" src="../_static/js/webui-popover.js"></script>
+<script type="text/javascript" src="../../static/js/webui-popover.js"></script>
 
 <!-- Javascript for page -->
 <script language="JavaScript">

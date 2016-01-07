@@ -9,18 +9,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Bootstrap CSS -->
-<link href="_static/css/bootstrap.min.css" rel="stylesheet">
+<link href="../static/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Pygments CSS -->
-<link href="_static/css/native.css" rel="stylesheet">
+<link href="../static/css/native.css" rel="stylesheet">
 
 <!-- Fonts -->
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 
 <!-- Custom CSS -->
-<link href="_static/css/combined.css" rel="stylesheet">
-<link href="_static/css/styles.css" rel="stylesheet">
+<link href="../static/css/combined.css" rel="stylesheet">
+<link href="../static/css/styles.css" rel="stylesheet">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -248,7 +248,7 @@ connection = mysql+pymysql://keystone:KEYSTONE_DBPASS@controller/keystone
 </div>
 </li>
 <li><p class="first">초기 관리 토큰을 설정합니다:</p>
-<a class="reference internal image-reference" href="_images/keystone_1_admin_token.png"><img alt="_images/keystone_1_admin_token.png" src="_images/keystone_1_admin_token.png" /></a>
+<a class="reference internal image-reference" href="../images/keystone_1_admin_token.png"><img alt="../images/keystone_1_admin_token.png" src="../images/keystone_1_admin_token.png" /></a>
 <p>전단계에서 생성한 무작위값을 사용합니다. 만약 non-interactive mode로 설치했거나 토큰을 지정하지 않으면, 설정 툴이 무작위값을 생성합니다.</p>
 <p>나중에, 해당 패키지가 입력한 값과 함께 아래 지시자를 구성할 것입니다:</p>
 <div class="highlight-ini"><div class="highlight"><pre>[DEFAULT]
@@ -265,11 +265,11 @@ admin_token = ADMIN_TOKEN
 <span class="gp">#</span> openstack role add --project demo --user demo user
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="_images/keystone_2_register_admin_tenant_yes_no.png"><img alt="_images/keystone_2_register_admin_tenant_yes_no.png" src="_images/keystone_2_register_admin_tenant_yes_no.png" /></a>
-<a class="reference internal image-reference" href="_images/keystone_3_admin_user_name.png"><img alt="_images/keystone_3_admin_user_name.png" src="_images/keystone_3_admin_user_name.png" /></a>
-<a class="reference internal image-reference" href="_images/keystone_4_admin_user_email.png"><img alt="_images/keystone_4_admin_user_email.png" src="_images/keystone_4_admin_user_email.png" /></a>
-<a class="reference internal image-reference" href="_images/keystone_5_admin_user_pass.png"><img alt="_images/keystone_5_admin_user_pass.png" src="_images/keystone_5_admin_user_pass.png" /></a>
-<a class="reference internal image-reference" href="_images/keystone_6_admin_user_pass_confirm.png"><img alt="_images/keystone_6_admin_user_pass_confirm.png" src="_images/keystone_6_admin_user_pass_confirm.png" /></a>
+<a class="reference internal image-reference" href="../images/keystone_2_register_admin_tenant_yes_no.png"><img alt="../images/keystone_2_register_admin_tenant_yes_no.png" src="../images/keystone_2_register_admin_tenant_yes_no.png" /></a>
+<a class="reference internal image-reference" href="../images/keystone_3_admin_user_name.png"><img alt="../images/keystone_3_admin_user_name.png" src="../images/keystone_3_admin_user_name.png" /></a>
+<a class="reference internal image-reference" href="../images/keystone_4_admin_user_email.png"><img alt="../images/keystone_4_admin_user_email.png" src="../images/keystone_4_admin_user_email.png" /></a>
+<a class="reference internal image-reference" href="../images/keystone_5_admin_user_pass.png"><img alt="../images/keystone_5_admin_user_pass.png" src="../images/keystone_5_admin_user_pass.png" /></a>
+<a class="reference internal image-reference" href="../images/keystone_6_admin_user_pass_confirm.png"><img alt="../images/keystone_6_admin_user_pass_confirm.png" src="../images/keystone_6_admin_user_pass_confirm.png" /></a>
 <p>Debian에서는, Keystone 패키지가 서비스 카탈로그 내 Keystone에 대한 자동 등록을 제공합니다. 이는 아래 명령어를 실행하는 것과 동일합니다:</p>
 <div class="highlight-console"><div class="highlight"><pre><span class="gp">#</span> openstack service create --name keystone --description <span class="s2">&quot;OpenStack Identity&quot;</span>  identity
 <span class="gp">#</span> keystone endpoint-create <span class="se">\</span>
@@ -280,7 +280,7 @@ admin_token = ADMIN_TOKEN
 <span class="go">  identity</span>
 </pre></div>
 </div>
-<img alt="_images/keystone_7_register_endpoint.png" src="_images/keystone_7_register_endpoint.png" />
+<img alt="../images/keystone_7_register_endpoint.png" src="../images/keystone_7_register_endpoint.png" />
 </li>
 </ol>
 </div>
@@ -308,7 +308,7 @@ admin_token = ADMIN_TOKEN
           <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-8 docs-license">
 <a href="https://creativecommons.org/licenses/by/3.0/">
- <img src="_static/images/docs/license.png" alt="Creative Commons Attribution 3.0 License"/>
+ <img src="../static/images/docs/license.png" alt="Creative Commons Attribution 3.0 License"/>
 </a>
 <p>
  Except where otherwise noted, this document is licensed under
@@ -457,19 +457,19 @@ admin_token = ADMIN_TOKEN
   </div>
 </div>
 <!-- jQuery -->
-<script type="text/javascript" src="_static/js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="../static/js/jquery-1.11.3.js"></script>
 
 <!-- Bootstrap JavaScript -->
-<script type="text/javascript" src="_static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
 
 <!-- The rest of the JS -->
-<script type="text/javascript" src="_static/js/navigation.js"></script>
+<script type="text/javascript" src="../static/js/navigation.js"></script>
 
 <!-- Docs JS -->
-<script type="text/javascript" src="_static/js/docs.js"></script>
+<script type="text/javascript" src="../static/js/docs.js"></script>
 
 <!-- Popovers -->
-<script type="text/javascript" src="_static/js/webui-popover.js"></script>
+<script type="text/javascript" src="../static/js/webui-popover.js"></script>
 
 <!-- Javascript for page -->
 <script language="JavaScript">
