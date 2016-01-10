@@ -1,5 +1,6 @@
 # openstack-install-guide-ko_KR
 * OpenStack 설치 가이드: 한글 번역 확인을 위한 임시 저장소
+* License: Apache 2.0 (http://www.apache.org/licenses/LICENSE-2.0)
 
 # 사용 방법 (직접 하고 싶은 경우)
 * 1. 해당 저장소를 로컬 환경 (bash 동작 필요)에 pull
