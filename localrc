@@ -1,0 +1,30 @@
+# Setting file for OpenStack i18n ko_KR translation
+# and push htmls to a static git repo
+
+# local directories
+# NOTE: It depends on your environment. Please change it if needed.
+OPENSTACK_MANUALS_DIR=../../git/openstack/openstack-manuals
+GH_PAGES_REPO_TARGET_DIR=../install-guide_gh-pages/liberty
+
+# Target branch locale name
+# NOTE: Zanata uses ko-KR, not ko_KR for Korean language locale.
+#       Please go to zanata_exec.sh if you want to change the locale.
+BRANCH=stable/liberty
+LOCALE=ko_KR
+
+# Language configuration file name
+LANG_CONF_FILENAME=doc-tools-check-languages.conf
+
+# After the execution of zanata_exec.sh, two po files will be named 
+#  as the same ko_KR.po. Each file name should be changed to 
+#  common-rst.po and install-guide.po, respectively.
+COMMON_RST_BASE_DIR=doc/common-rst/source
+INSTALL_GUIDE_BASE_DIR=doc/install-guide/source
+LOCALE_SUBDIR=locale
+INSTALL_GUIDE_PO_FILENAME=install-guide.po
+COMMON_RST_PO_FILENAME=common-rst.po
+PO_FILENAME=$LOCALE.po
+
+# The location of generated HTML files
+PUBLISH_DOCS_SUBDIR=publish-docs
+

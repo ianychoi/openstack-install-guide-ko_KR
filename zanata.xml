@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config xmlns="http://zanata.org/namespace/config/">
+  <url>https://translate.openstack.org:443/</url>
+  <project>openstack-manuals</project>
+  <project-version>stable-liberty</project-version>
+  <project-type>gettext</project-type>
+
+</config>

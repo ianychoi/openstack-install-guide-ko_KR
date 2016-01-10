@@ -1,0 +1,46 @@
+# directories to be set up
+declare -A DIRECTORIES=(
+)
+
+# books to be built
+declare -A BOOKS=(
+    ["ko_KR"]="install-guide"
+)
+
+# draft books
+declare -A DRAFTS=(
+    ["ko_KR"]="install-guide"
+)
+
+# Where does the top-level pom live?
+# Set to empty to not copy it.
+POM_FILE="doc/pom.xml"
+
+# Location of doc dir
+DOC_DIR="doc/"
+
+# Books with special handling.
+# Values need to match content in
+# project-config/jenkins/scripts/common_translation_update.sh
+declare -A SPECIAL_BOOKS=(
+    # Skip nearly everything for liberty. We only translate the
+    # install-guide on the branch.
+    ["install-guide"]="RST"
+    ["admin-guide-cloud"]="skip"
+    ["arch-design"]="skip"
+    ["cli-reference"]="skip"
+    ["common"]="skip"
+    ["config-reference"]="skip"
+    ["glossary"]="skip"
+    ["image-guide"]="skip"
+    ["networking-guide"]="skip"
+    ["user-guide"]="skip"
+    ["user-guide-admin"]="skip"
+    # Skip in-progress guides
+    ["contributor-guide"]="skip"
+    ["arch-design-rst"]="skip"
+    ["config-ref-rst"]="skip"
+    ["image-guide-rst"]="skip"
+    # This needs special handling, handle it with the RST tools.
+    ["common-rst"]="RST"
+)

@@ -1,0 +1,8 @@
+# Zanata cache files
+.zanata-cache/
+
+# local po files retrieved from Zanata
+doc/
+
+# Do not include log files
+*.log
