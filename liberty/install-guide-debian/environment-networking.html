@@ -162,7 +162,7 @@ ga('send', 'pageview');
   </div>
 </div>
           <div class="row docs-byline">
-            <div class="docs-updated">updated: 2016-01-10 10:51</div>
+            <div class="docs-updated">updated: 2016-01-16 01:30</div>
           </div>
           <div class="row">
             <div class="col-lg-12">
@@ -178,7 +178,7 @@ ga('send', 'pageview');
   <div class="section" id="host-networking">
 <h1>호스트 네트워킹<a class="headerlink" href="#host-networking" title="제목 주소">¶</a></h1>
 <p>각 노드에 배포하고자 선택한 아키텍처에 대한 운영체제를 설치한 이후에는, 네트워크 인터페이스를 구성해야 합니다. 대상 배포판에서 자동으로 네트워크를 관리하는 도구를 비활성화하고 구성 파일에 적합하게 수동으로 편집할 것을 권장합니다. 배포판에 따른 네트워크 구성 방법에 대한 자세한 정보는 <a class="reference external" href="https://wiki.debian.org/NetworkConfiguration">문서</a> 를 참고합니다.</p>
-<p>모든 노드에는 패키지 설치, 보안 업데이트, <a class="reference internal" href="common/glossary.html#term-dns"><em class="xref std std-term">DNS</em></a> 및 <a class="reference internal" href="common/glossary.html#term-ntp"><em class="xref std std-term">NTP</em></a> 등의 관리 목적을 위한 인터넷 액세스를 필요로 합니다. 대부분의 경우에, 노드들은 관리 네트워크 인터페이스를 통하여 인터넷 액세스를 얻습니다. 네트워크 분리의 중요성을 강조하기 위해, 예제 아키텍처에서는 <a class="reference external" href="https://tools.ietf.org/html/rfc1918">사설 주소 공간</a> 를 관리 네트워크에 대해 사용하고, 물리 네트워크 인프라에서는 <em class="xref std std-term">NAT`또는 다른 방법을 통해 인터넥 액세스를 제공한다고 가정합니다. 예제 아키텍처는 공용 네트워크로 라우팅이 가능한 IP 주소 영역을 사용하며, 물리 네트워크 인프라에서 직접적인 인터넥 액세스를 제공한다고 가정합니다. 프로바이더 네트워크 아키텍처에서는, 모든 인스턴스들이 공용 네트워크에 직접적으로 연결됩니다. 셀프 서비스 네트워크 아키텍처에서는, 인스턴스들이 사설 또는 공용 네트워크에 연결될 수 있습니다. 사설 네트워크는 OpenStack 내에 있을 수 있으며, 또는 :term:`NAT</em> 를 사용한 공용 네트워크에 대한 액세스의 일정 레벨을 제공할 수 있습니다.</p>
+<p>모든 노드에는 패키지 설치, 보안 업데이트, <a class="reference internal" href="common/glossary.html#term-dns"><em class="xref std std-term">DNS</em></a> 과 <a class="reference internal" href="common/glossary.html#term-ntp"><em class="xref std std-term">NTP</em></a> 등의 관리 목적을 위한 인터넷 액세스를 필요로 합니다. 일반적인 경우에, 노드들은 관리 네트워크 인터페이스를 통하여 인터넷에 접근합니다. 네트워크 분리의 중요성을 강조하기 위해, 예제 아키텍처에서는 <a class="reference external" href="https://tools.ietf.org/html/rfc1918">사설 주소 공간</a> 를 관리 네트워크에서 사용하고, 물리 네트워크 인프라에서는 <a class="reference internal" href="common/glossary.html#term-nat"><em class="xref std std-term">NAT</em></a>  또는 다른 방법을 통해 인터넷 액세스를 제공한다고 가정합니다. 예제 아키텍처는 공용 네트워크로 라우팅이 가능한 IP 주소 영역을 사용하며, 물리 네트워크 인프라에서 직접적인 인터넥 액세스를 제공한다고 가정합니다. 프로바이더 네트워크 아키텍처에서는 모든 인스턴스들이 공용 네트워크에 직접적으로 연결됩니다. 셀프 서비스 네트워크 아키텍처에서는 인스턴스들이 사설 또는 공용 네트워크에 연결될 수 있습니다. 사설 네트워크는 OpenStack 내에 있을 수 있으며, 또는 <a class="reference internal" href="common/glossary.html#term-nat"><em class="xref std std-term">NAT</em></a> 를 사용한 공용 네트워크에 대한 액세스의 일정 레벨을 제공할 수 있습니다.</p>
 <div class="figure" id="figure-networklayout">
 <img alt="Network layout" src="../images/networklayout.png" />
 </div>
@@ -187,12 +187,12 @@ ga('send', 'pageview');
 <li><p class="first">게이트웨이 10.0.0.1 를 사용하여 10.0.0.0/24 대역을 관리합니다.</p>
 <p>해당 네트워크는 패키지 설치, 보안 업데이트, <a class="reference internal" href="common/glossary.html#term-dns"><em class="xref std std-term">DNS</em></a> 및 <a class="reference internal" href="common/glossary.html#term-ntp"><em class="xref std std-term">NTP</em></a> 등의 관리 목적을 위해 모든 노드에 인터넷 액세스를 제공하는 게이트웨이를 필요로 합니다.</p>
 </li>
-<li><p class="first">게이트웨이 203.0.113.1 을 사용하여 공용 203.0.113.0/24 대역을 관리합니다.</p>
+<li><p class="first">게이트웨이 203.0.113.1 을 사용하여 203.0.113.0/24 대역인 공용 네트워크를 관리합니다.</p>
 <p>해당 네트워크는 OpenStack 환경에서 인터넷 액세스를 제공하기 위한 게이트웨이를 필요로 합니다.</p>
 </li>
 </ul>
 <p>해당 범위 및 게이트웨이를 특정 네트워크 인프라에서 동작하도록 하기 위해 수정 가능합니다.</p>
-<p>네트워크 인터페이스 이름은 배포판에 따라 다양합니다. 전통적으로, 인터페이스들은 &#8220;eth&#8221;에 순차적인 번호를 붙여 사용합니다. 모든 배포판을 수용하기 위해, 본 가이드에서는 단순하게 첫 번째 인터페이스를 가장 낮은 번호로, 그리고 두 번째 인터페이스를 가장 높은 번호로 지정합니다.</p>
+<p>네트워크 인터페이스 이름은 배포판에 따라 다양합니다. 전통적으로 인터페이스들은 &#8220;eth&#8221;에 순차적인 번호를 붙여 사용합니다. 모든 배포판을 수용하기 위해, 본 가이드에서는 단순하게 첫 번째 인터페이스를 가장 낮은 번호로, 그리고 두 번째 인터페이스를 가장 높은 번호로 지정합니다.</p>
 <p>예제 아키텍처에서 제공하는 구성과 동일하게 사용하고자 하는 경우가 아니라면, 해당 단계에서 대상 환경에 맞도록 네트워크를 수정해야 합니다. 또한, 각 노드는 IP 주소 뿐만 아니라 다른 노드들을 이름으로 변환해야 합니다. 예를 들면, <code class="docutils literal"><span class="pre">controller</span></code> 이름은 컨트롤러 노드의 관리 인터페이스에 해당하는 IP 주소인 <code class="docutils literal"><span class="pre">10.0.0.11</span></code> 로 변환이 이루어져야 합니다.</p>
 <div class="admonition warning">
 <p class="first admonition-title">경고</p>
@@ -207,7 +207,7 @@ ga('send', 'pageview');
 <li class="toctree-l1"><a class="reference internal" href="environment-networking-controller.html">컨트롤러 노드</a></li>
 <li class="toctree-l1"><a class="reference internal" href="environment-networking-compute.html">Compute 노드</a></li>
 <li class="toctree-l1"><a class="reference internal" href="environment-networking-storage-cinder.html">블록 스토리지 노드 (옵션)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="environment-networking-storage-swift.html">Object 스토리지 노드 (옵션)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment-networking-storage-swift.html">오브젝트 스토리지 노드 (옵션)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="environment-networking-verify.html">연결 확인</a></li>
 </ul>
 </div>
@@ -227,7 +227,7 @@ ga('send', 'pageview');
             <a id="logABugLink3" href="" target="_blank" title="Found an error? Report a bug against this page"><i class="fa fa-bug" data-toggle="tooltip" data-placement="top" title="Report a Bug"></i></a>
           </div>
           <div class="row docs-byline bottom">
-            <div class="docs-updated">updated: 2016-01-10 10:51</div>
+            <div class="docs-updated">updated: 2016-01-16 01:30</div>
           </div>
           <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-8 docs-license">
@@ -281,13 +281,13 @@ ga('send', 'pageview');
     <div class="docs-sidebar-section" id="table-of-contents">
       <a href="index.html" class="docs-sidebar-section-title"><h4>내용</h4></a>
       <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="common/conventions.html">통용 규칙</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/conventions.html">문서에서 사용하는 규칙</a></li>
 <li class="toctree-l1"><a class="reference internal" href="overview.html">개요</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="environment.html">환경</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="environment-security.html">보안</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">호스트 네트워킹</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environment-ntp.html">Network Time Protocol (NTP)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="environment-packages.html">오픈스택 패키지</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environment-packages.html">OpenStack 패키지</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environment-sql-database.html">SQL 데이터베이스</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environment-nosql-database.html">NoSQL 데이터베이스</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environment-messaging.html">메시지 큐</a></li>
@@ -305,7 +305,7 @@ ga('send', 'pageview');
 <li class="toctree-l1"><a class="reference internal" href="ceilometer.html">Telemetry 서비스 추가</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launch-instance.html">인스턴스 실행</a></li>
 <li class="toctree-l1"><a class="reference internal" href="common/app_support.html">커뮤니티 지원</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/glossary.html">용어집</a></li>
 </ul>
 
     </div>
@@ -416,7 +416,7 @@ ga('send', 'pageview');
         gitURL = "Source: http://git.openstack.org/cgit/openstack/openstack-manuals/tree/doc/install-guide/source" + "/" + sourceFile;
 
     /* gitsha, project and bug_tag rely on variables in conf.py */
-    var gitSha = "SHA: bafa0de0ca68a7c497cadd768a7572cf29b090fe";
+    var gitSha = "SHA: ab79de9486175687ee6205ccce4c8f7598c89032";
         var bugProject = "openstack-manuals";
     var bugTitle = "호스트 네트워킹 in Installation Guide";
     var fieldTags = "install-guide";
@@ -424,7 +424,7 @@ ga('send', 'pageview');
     /* "last_updated" is the build date and time. It relies on the
        conf.py variable "html_last_updated_fmt", which should include
        year/month/day as well as hours and minutes                   */
-    var buildstring = "Release: 0.1 on 2016-01-10 10:51";
+    var buildstring = "Release: 0.1 on 2016-01-16 01:30";
 
     var fieldComment = encodeURI(buildstring) +
                        lineFeed + encodeURI(gitSha) +

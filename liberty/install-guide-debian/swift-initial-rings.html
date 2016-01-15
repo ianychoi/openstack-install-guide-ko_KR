@@ -162,7 +162,7 @@ ga('send', 'pageview');
   </div>
 </div>
           <div class="row docs-byline">
-            <div class="docs-updated">updated: 2016-01-10 10:51</div>
+            <div class="docs-updated">updated: 2016-01-16 01:30</div>
           </div>
           <div class="row">
             <div class="col-lg-12">
@@ -186,7 +186,7 @@ ga('send', 'pageview');
 <p>오브젝트 스토리지 서비스를 시작하기 전에, 초기 계정, 컨테이너 및 오브젝트 ring을 생성해야 합니다. ring 빌더는 각 노드가 스토리디 아키텍처를 결정하고 배포하는데 사용하는 구성 파일을 생성합니다. 간략화하여, 이 가이드에서는 하나의 region 및 2^10 (1024) 개의 최대 파티션을 갖는 zone을, 각 오브젝트는 3개의 replica를, 그리고 파티션을 한 번 이상 옮기는데 최소 1시간을 갖도록 사용합니다. 오브젝트 스토리지에서, 파티션은 통상적인 파티션 테이블보다는 스토리지 장치에서의 디렉토리를 가리킵니다. 자세한 정보는, <a class="reference external" href="http://docs.openstack.org/developer/swift/deployment_guide.html">Deployment Guide</a> 를 살펴봅니다.</p>
 <div class="admonition note">
 <p class="first admonition-title">주석</p>
-<p class="last">해당 단계를 컨트롤러 노드에서 수행합니다.</p>
+<p class="last">해당 단계를 컨트롤러 노드에서 진행합니다.</p>
 </div>
 <div class="section" id="create-account-ring">
 <h2>계정 ring 생성<a class="headerlink" href="#create-account-ring" title="제목 주소">¶</a></h2>
@@ -200,7 +200,7 @@ ga('send', 'pageview');
 </div>
 <div class="admonition note">
 <p class="first admonition-title">주석</p>
-<p class="last">이 명령어는 출력이 없습니다.</p>
+<p class="last">이 명령어는 출력값이 없습니다.</p>
 </div>
 </li>
 <li><p class="first">Ring을 각 스토리지 노드에 추가:</p>
@@ -264,7 +264,7 @@ ga('send', 'pageview');
 </div>
 <div class="admonition note">
 <p class="first admonition-title">주석</p>
-<p class="last">이 명령어는 출력이 없습니다.</p>
+<p class="last">이 명령어는 출력값이 없습니다.</p>
 </div>
 </li>
 <li><p class="first">Ring을 각 스토리지 노드에 추가:</p>
@@ -328,7 +328,7 @@ ga('send', 'pageview');
 </div>
 <div class="admonition note">
 <p class="first admonition-title">주석</p>
-<p class="last">이 명령어는 출력이 없습니다.</p>
+<p class="last">이 명령어는 출력값이 없습니다.</p>
 </div>
 </li>
 <li><p class="first">Ring을 각 스토리지 노드에 추가:</p>
@@ -403,7 +403,7 @@ ga('send', 'pageview');
             <a id="logABugLink3" href="" target="_blank" title="Found an error? Report a bug against this page"><i class="fa fa-bug" data-toggle="tooltip" data-placement="top" title="Report a Bug"></i></a>
           </div>
           <div class="row docs-byline bottom">
-            <div class="docs-updated">updated: 2016-01-10 10:51</div>
+            <div class="docs-updated">updated: 2016-01-16 01:30</div>
           </div>
           <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-8 docs-license">
@@ -457,7 +457,7 @@ ga('send', 'pageview');
     <div class="docs-sidebar-section" id="table-of-contents">
       <a href="index.html" class="docs-sidebar-section-title"><h4>내용</h4></a>
       <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="common/conventions.html">통용 규칙</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/conventions.html">문서에서 사용하는 규칙</a></li>
 <li class="toctree-l1"><a class="reference internal" href="overview.html">개요</a></li>
 <li class="toctree-l1"><a class="reference internal" href="environment.html">환경</a></li>
 <li class="toctree-l1"><a class="reference internal" href="debconf/debconf.html">debconf를 사용한 OpenStack 구성</a></li>
@@ -481,7 +481,7 @@ ga('send', 'pageview');
 <li class="toctree-l1"><a class="reference internal" href="ceilometer.html">Telemetry 서비스 추가</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launch-instance.html">인스턴스 실행</a></li>
 <li class="toctree-l1"><a class="reference internal" href="common/app_support.html">커뮤니티 지원</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/glossary.html">용어집</a></li>
 </ul>
 
     </div>
@@ -592,7 +592,7 @@ ga('send', 'pageview');
         gitURL = "Source: http://git.openstack.org/cgit/openstack/openstack-manuals/tree/doc/install-guide/source" + "/" + sourceFile;
 
     /* gitsha, project and bug_tag rely on variables in conf.py */
-    var gitSha = "SHA: bafa0de0ca68a7c497cadd768a7572cf29b090fe";
+    var gitSha = "SHA: ab79de9486175687ee6205ccce4c8f7598c89032";
         var bugProject = "openstack-manuals";
     var bugTitle = "처음 ring 생성 및 분배 in Installation Guide";
     var fieldTags = "install-guide";
@@ -600,7 +600,7 @@ ga('send', 'pageview');
     /* "last_updated" is the build date and time. It relies on the
        conf.py variable "html_last_updated_fmt", which should include
        year/month/day as well as hours and minutes                   */
-    var buildstring = "Release: 0.1 on 2016-01-10 10:51";
+    var buildstring = "Release: 0.1 on 2016-01-16 01:30";
 
     var fieldComment = encodeURI(buildstring) +
                        lineFeed + encodeURI(gitSha) +

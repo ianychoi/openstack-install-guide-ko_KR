@@ -162,7 +162,7 @@ ga('send', 'pageview');
   </div>
 </div>
           <div class="row docs-byline">
-            <div class="docs-updated">updated: 2016-01-10 10:51</div>
+            <div class="docs-updated">updated: 2016-01-16 01:30</div>
           </div>
           <div class="row">
             <div class="col-lg-12">
@@ -182,14 +182,14 @@ ga('send', 'pageview');
 <li class="toctree-l1"><a class="reference internal" href="common/get_started_block_storage.html">OpenStack 블록 스토리지</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cinder-controller-install.html">컨트롤러 노드 설치와 설정</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="cinder-controller-install.html#prerequisites">선행조건</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cinder-controller-install.html#install-and-configure-components">구성요소 설치 및 구성</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cinder-controller-install.html#install-and-configure-components">구성요소 설치와 구성</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cinder-controller-install.html#configure-compute-to-use-block-storage">Compute에서 블록 스토리지 사용 구성</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cinder-controller-install.html#finalize-installation">설치 마무리</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="cinder-storage-install.html">스토리지 노드의 설치 및 구성</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="cinder-storage-install.html">스토리지 노드 설치와 구성</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="cinder-storage-install.html#prerequisites">선행조건</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cinder-storage-install.html#install-and-configure-components">구성요소 설치 및 구성</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cinder-storage-install.html#install-and-configure-components">구성요소 설치와 구성</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cinder-storage-install.html#finalize-installation">설치 마무리</a></li>
 </ul>
 </li>
@@ -197,10 +197,10 @@ ga('send', 'pageview');
 <li class="toctree-l1"><a class="reference internal" href="cinder-next-steps.html">다음 단계</a></li>
 </ul>
 </div>
-<p>OpenStack 블록 스토리지 서비스는 블록 스토리지 장치를 게스트 인스턴스에 제공합니다. 스토리지가 프로비저닝되고 소비되는 방식은 블록 스토리지 드라이버, 또는 여러 백엔드 구성에 대한 경우에는 드라이버에 의해 결정됩니다. NAS/SAN, NFS, iSCSI, Ceph 등 사용 가능한 다양한 드라이버가 있습니다. 블록 스토리지 API와 스케줄러 서비스는 보통 컨트롤러 노드에서 실행됩니다. 사용하는 드라이버에 따라, 볼륨 서비스는 컨트롤러, Compute 노드 또는 독립된 스토리지 노드에서 동작 가능합니다. 보다 자세한 정보는, <a class="reference external" href="http://docs.openstack.org/liberty/config-reference/content/section_volume-drivers.html">Configuration Reference</a> 를 살펴봅니다.</p>
+<p>OpenStack 블록 스토리지 서비스는 블록 스토리지 장치를 게스트 인스턴스에 제공합니다. 스토리지가 프로비저닝되고 소비되는 방식은 블록 스토리지 드라이버 또는 여러 백엔드 구성에 대한 경우에는 드라이버에 의해 결정됩니다. NAS/SAN, NFS, iSCSI, Ceph 등 사용 가능한 다양한 드라이버가 있습니다. 블록 스토리지 API와 스케줄러 서비스는 보통 컨트롤러 노드에서 실행됩니다. 사용하는 드라이버에 따라, 볼륨 서비스는 컨트롤러, Compute 노드 또는 독립된 스토리지 노드에서 동작 가능합니다. 보다 자세한 정보는, <a class="reference external" href="http://docs.openstack.org/liberty/config-reference/content/section_volume-drivers.html">Configuration Reference</a> 를 살펴봅니다.</p>
 <div class="admonition note">
 <p class="first admonition-title">주석</p>
-<p class="last">이 장에서는 백업 관리자를 생략하는데, 왜냐하면 Object 스토리지 서비스에 의존하기 때문입니다.</p>
+<p class="last">이 장에서는 백업 관리자를 생략합니다. 왜냐하면 오브젝트 스토리지 서비스에 의존하기 때문입니다.</p>
 </div>
 </div>
 
@@ -218,7 +218,7 @@ ga('send', 'pageview');
             <a id="logABugLink3" href="" target="_blank" title="Found an error? Report a bug against this page"><i class="fa fa-bug" data-toggle="tooltip" data-placement="top" title="Report a Bug"></i></a>
           </div>
           <div class="row docs-byline bottom">
-            <div class="docs-updated">updated: 2016-01-10 10:51</div>
+            <div class="docs-updated">updated: 2016-01-16 01:30</div>
           </div>
           <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-8 docs-license">
@@ -272,7 +272,7 @@ ga('send', 'pageview');
     <div class="docs-sidebar-section" id="table-of-contents">
       <a href="index.html" class="docs-sidebar-section-title"><h4>내용</h4></a>
       <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="common/conventions.html">통용 규칙</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/conventions.html">문서에서 사용하는 규칙</a></li>
 <li class="toctree-l1"><a class="reference internal" href="overview.html">개요</a></li>
 <li class="toctree-l1"><a class="reference internal" href="environment.html">환경</a></li>
 <li class="toctree-l1"><a class="reference internal" href="debconf/debconf.html">debconf를 사용한 OpenStack 구성</a></li>
@@ -284,7 +284,7 @@ ga('send', 'pageview');
 <li class="toctree-l1 current"><a class="current reference internal" href="">블록 스토리지 서비스 추가</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="common/get_started_block_storage.html">OpenStack 블록 스토리지</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cinder-controller-install.html">컨트롤러 노드 설치와 설정</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cinder-storage-install.html">스토리지 노드의 설치 및 구성</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cinder-storage-install.html">스토리지 노드 설치와 구성</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cinder-verify.html">검증 과정</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cinder-next-steps.html">다음 단계</a></li>
 </ul>
@@ -294,7 +294,7 @@ ga('send', 'pageview');
 <li class="toctree-l1"><a class="reference internal" href="ceilometer.html">Telemetry 서비스 추가</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launch-instance.html">인스턴스 실행</a></li>
 <li class="toctree-l1"><a class="reference internal" href="common/app_support.html">커뮤니티 지원</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/glossary.html">용어집</a></li>
 </ul>
 
     </div>
@@ -405,7 +405,7 @@ ga('send', 'pageview');
         gitURL = "Source: http://git.openstack.org/cgit/openstack/openstack-manuals/tree/doc/install-guide/source" + "/" + sourceFile;
 
     /* gitsha, project and bug_tag rely on variables in conf.py */
-    var gitSha = "SHA: bafa0de0ca68a7c497cadd768a7572cf29b090fe";
+    var gitSha = "SHA: ab79de9486175687ee6205ccce4c8f7598c89032";
         var bugProject = "openstack-manuals";
     var bugTitle = "블록 스토리지 서비스 추가 in Installation Guide";
     var fieldTags = "install-guide";
@@ -413,7 +413,7 @@ ga('send', 'pageview');
     /* "last_updated" is the build date and time. It relies on the
        conf.py variable "html_last_updated_fmt", which should include
        year/month/day as well as hours and minutes                   */
-    var buildstring = "Release: 0.1 on 2016-01-10 10:51";
+    var buildstring = "Release: 0.1 on 2016-01-16 01:30";
 
     var fieldComment = encodeURI(buildstring) +
                        lineFeed + encodeURI(gitSha) +

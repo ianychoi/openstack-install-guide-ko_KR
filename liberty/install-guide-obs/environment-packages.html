@@ -3,7 +3,7 @@
   <head>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
 
-    <title>OpenStack Docs: 오픈스택 패키지</title>
+    <title>OpenStack Docs: OpenStack 패키지</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -149,7 +149,7 @@ ga('send', 'pageview');
         <div class="col-lg-9 col-md-8 col-sm-8 col-lg-push-3 col-md-push-4 col-sm-push-4">
 <div class="row">
   <div class="col-lg-8">
-    <h2>오픈스택 패키지</h2>
+    <h2>OpenStack 패키지</h2>
   </div>
   <div class="docs-actions">
     
@@ -162,14 +162,14 @@ ga('send', 'pageview');
   </div>
 </div>
           <div class="row docs-byline">
-            <div class="docs-updated">updated: 2016-01-10 10:51</div>
+            <div class="docs-updated">updated: 2016-01-16 01:29</div>
           </div>
           <div class="row">
             <div class="col-lg-12">
               <div class="docs-top-contents">
                 <h5><a href="index.html">Contents</a></h5>
                 <ul>
-<li><a class="reference internal" href="#">오픈스택 패키지</a><ul>
+<li><a class="reference internal" href="#">OpenStack 패키지</a><ul>
 <li><a class="reference internal" href="#id2">OpenStack 저장소 활성화</a></li>
 <li><a class="reference internal" href="#finalize-the-installation">설치 마무리</a></li>
 </ul>
@@ -180,7 +180,7 @@ ga('send', 'pageview');
               <div class="docs-body">
 
   <div class="section" id="openstack-packages">
-<h1>오픈스택 패키지<a class="headerlink" href="#openstack-packages" title="제목 주소">¶</a></h1>
+<h1>OpenStack 패키지<a class="headerlink" href="#openstack-packages" title="제목 주소">¶</a></h1>
 <p>배포판들은 릴리즈 스케줄이 서로 다르므로 OpenStack 패키지를 배포판의 일부 또는 다른 방법을 사용하여 릴리즈합니다. 다음 과정을 모든 노드에서 수행합니다.</p>
 <div class="admonition warning">
 <p class="first admonition-title">경고</p>
@@ -188,7 +188,7 @@ ga('send', 'pageview');
 </div>
 <div class="admonition note">
 <p class="first admonition-title">주석</p>
-<p class="last">OpenStack 환경에 영향을 줄 수 있으므로, 자동 업데이트 서비스를 비활성화 또는 제거합니다.</p>
+<p class="last">OpenStack 환경에 영향을 줄 수 있으므로 자동 업데이트 서비스를 비활성화 또는 제거합니다.</p>
 </div>
 <div class="section" id="id2">
 <h2>OpenStack 저장소 활성화<a class="headerlink" href="#id2" title="제목 주소">¶</a></h2>
@@ -198,11 +198,11 @@ ga('send', 'pageview');
 <div class="highlight-console"><div class="highlight"><pre><span class="gp">#</span> zypper addrepo -f obs://Cloud:OpenStack:Liberty/openSUSE_13.2 Liberty
 </pre></div>
 </div>
-<p>openSUSE 배포판에서는 패키지 집합을 나타내기 위해 패턴에 대한 개념을 사용합니다. 만약 초기 설치 도중 &#8216;최소 서버 선택 (텍스트 모드)&#8217; 을 선택하였다면, OpenStack 패키지를 설치하고자 시도하는 경우 의존성 충돌을 겪을 것입니다. 이를 피하기 위해, minimal_base-conflicts 캐지지를 제거합니다:</p>
+<p>openSUSE 배포판에서는 패키지 집합을 나타내기 위해 패턴에 대한 개념을 사용합니다. 만약 초기 설치 도중 &#8216;최소 서버 선택 (텍스트 모드)&#8217; 을 선택하였다면, OpenStack 패키지를 설치하고자 시도하는 경우 의존성 충돌을 겪을 것입니다. 이를 피하기 위해 minimal_base-conflicts 캐지지를 제거합니다:</p>
 <div class="highlight-console"><div class="highlight"><pre><span class="gp">#</span> zypper rm patterns-openSUSE-minimal_base-conflicts
 </pre></div>
 </div>
-<p><strong>SLES 12 에서:</strong></p>
+<p><strong>SLES 12 에서 :</strong></p>
 <div class="highlight-console"><div class="highlight"><pre><span class="gp">#</span> zypper addrepo -f obs://Cloud:OpenStack:Liberty/SLE_12 Liberty
 </pre></div>
 </div>
@@ -228,7 +228,7 @@ ga('send', 'pageview');
 </div>
 <div class="admonition note">
 <p class="first admonition-title">주석</p>
-<p class="last">새로운 커널이 업그레이드 과정에 포함되어 있다면, 호스트를 재부팅하여 활성화합니다.</p>
+<p class="last">새로운 커널이 업그레이드 과정에 포함되어 있다면 호스트를 재부팅하여 활성화합니다.</p>
 </div>
 </li>
 <li><p class="first">OpenStack 클라이언트를 설치합니다:</p>
@@ -254,7 +254,7 @@ ga('send', 'pageview');
             <a id="logABugLink3" href="" target="_blank" title="Found an error? Report a bug against this page"><i class="fa fa-bug" data-toggle="tooltip" data-placement="top" title="Report a Bug"></i></a>
           </div>
           <div class="row docs-byline bottom">
-            <div class="docs-updated">updated: 2016-01-10 10:51</div>
+            <div class="docs-updated">updated: 2016-01-16 01:29</div>
           </div>
           <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-8 docs-license">
@@ -308,13 +308,13 @@ ga('send', 'pageview');
     <div class="docs-sidebar-section" id="table-of-contents">
       <a href="index.html" class="docs-sidebar-section-title"><h4>내용</h4></a>
       <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="common/conventions.html">통용 규칙</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/conventions.html">문서에서 사용하는 규칙</a></li>
 <li class="toctree-l1"><a class="reference internal" href="overview.html">개요</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="environment.html">환경</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="environment-security.html">보안</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environment-networking.html">호스트 네트워킹</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environment-ntp.html">Network Time Protocol (NTP)</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">오픈스택 패키지</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">OpenStack 패키지</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environment-sql-database.html">SQL 데이터베이스</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environment-nosql-database.html">NoSQL 데이터베이스</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environment-messaging.html">메시지 큐</a></li>
@@ -331,7 +331,7 @@ ga('send', 'pageview');
 <li class="toctree-l1"><a class="reference internal" href="ceilometer.html">Telemetry 서비스 추가</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launch-instance.html">인스턴스 실행</a></li>
 <li class="toctree-l1"><a class="reference internal" href="common/app_support.html">커뮤니티 지원</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/glossary.html">용어집</a></li>
 </ul>
 
     </div>
@@ -442,15 +442,15 @@ ga('send', 'pageview');
         gitURL = "Source: http://git.openstack.org/cgit/openstack/openstack-manuals/tree/doc/install-guide/source" + "/" + sourceFile;
 
     /* gitsha, project and bug_tag rely on variables in conf.py */
-    var gitSha = "SHA: bafa0de0ca68a7c497cadd768a7572cf29b090fe";
+    var gitSha = "SHA: ab79de9486175687ee6205ccce4c8f7598c89032";
         var bugProject = "openstack-manuals";
-    var bugTitle = "오픈스택 패키지 in Installation Guide";
+    var bugTitle = "OpenStack 패키지 in Installation Guide";
     var fieldTags = "install-guide";
 
     /* "last_updated" is the build date and time. It relies on the
        conf.py variable "html_last_updated_fmt", which should include
        year/month/day as well as hours and minutes                   */
-    var buildstring = "Release: 0.1 on 2016-01-10 10:51";
+    var buildstring = "Release: 0.1 on 2016-01-16 01:29";
 
     var fieldComment = encodeURI(buildstring) +
                        lineFeed + encodeURI(gitSha) +

@@ -162,7 +162,7 @@ ga('send', 'pageview');
   </div>
 </div>
           <div class="row docs-byline">
-            <div class="docs-updated">updated: 2016-01-10 10:51</div>
+            <div class="docs-updated">updated: 2016-01-16 01:30</div>
           </div>
           <div class="row">
             <div class="col-lg-12">
@@ -208,7 +208,7 @@ ga('send', 'pageview');
 </li>
 <li><p class="first">키 페어 생성후 추가:</p>
 <div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ssh-keygen -q -N <span class="s2">&quot;&quot;</span>
-<span class="gp">$</span> nova keypair-add --pub-key .ssh/id_rsa.pub mykey
+<span class="gp">$</span> nova keypair-add --pub-key ~/.ssh/id_rsa.pub mykey
 </pre></div>
 </div>
 <div class="admonition note">
@@ -230,7 +230,7 @@ ga('send', 'pageview');
 </div>
 <div class="section" id="add-security-group-rules">
 <h2>시큐리티 그룹 규칙 추가<a class="headerlink" href="#add-security-group-rules" title="제목 주소">¶</a></h2>
-<p>기본적으로 <code class="docutils literal"><span class="pre">default</span></code> 시큐리티 그룹에는 모든 인스턴스에 제공되며, 인스턴스에 대한 원격 접근을 막는 방화벽 규칙을 포함합니다. CirrOS 와 같은 리눅스 이미지를 위해서 적어도 ICMP(ping)와 보안 쉘(SSH)를 허용하는 것이 좋습니다.</p>
+<p>기본적으로 <code class="docutils literal"><span class="pre">default</span></code> 시큐리티 그룹에는 모든 인스턴스에 제공되며, 인스턴스에 대한 원격 접근을 막는 방화벽 규칙을 포함합니다. CirrOS 와 같은 리눅스 이미지를 위해서 적어도 ICMP(ping)와 보안 셸(SSH)를 허용하는 것이 좋습니다.</p>
 <ul>
 <li><p class="first"><code class="docutils literal"><span class="pre">default</span></code> 시큐리티 그룹에 규칙 추가:</p>
 <ul>
@@ -244,7 +244,7 @@ ga('send', 'pageview');
 </pre></div>
 </div>
 </li>
-<li><p class="first">시큐리티 쉘 (SSH) 접근 허용:</p>
+<li><p class="first">시큐리티 셸 (SSH) 접근 허용:</p>
 <div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> nova secgroup-add-rule default tcp <span class="m">22</span> <span class="m">22</span> 0.0.0.0/0
 <span class="go">+-------------+-----------+---------+-----------+--------------+</span>
 <span class="go">| IP Protocol | From Port | To Port | IP Range  | Source Group |</span>
@@ -302,7 +302,7 @@ ga('send', 'pageview');
             <a id="logABugLink3" href="" target="_blank" title="Found an error? Report a bug against this page"><i class="fa fa-bug" data-toggle="tooltip" data-placement="top" title="Report a Bug"></i></a>
           </div>
           <div class="row docs-byline bottom">
-            <div class="docs-updated">updated: 2016-01-10 10:51</div>
+            <div class="docs-updated">updated: 2016-01-16 01:30</div>
           </div>
           <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-8 docs-license">
@@ -356,7 +356,7 @@ ga('send', 'pageview');
     <div class="docs-sidebar-section" id="table-of-contents">
       <a href="index.html" class="docs-sidebar-section-title"><h4>내용</h4></a>
       <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="common/conventions.html">통용 규칙</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/conventions.html">문서에서 사용하는 규칙</a></li>
 <li class="toctree-l1"><a class="reference internal" href="overview.html">개요</a></li>
 <li class="toctree-l1"><a class="reference internal" href="environment.html">환경</a></li>
 <li class="toctree-l1"><a class="reference internal" href="debconf/debconf.html">debconf를 사용한 OpenStack 구성</a></li>
@@ -379,7 +379,7 @@ ga('send', 'pageview');
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="common/app_support.html">커뮤니티 지원</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/glossary.html">용어집</a></li>
 </ul>
 
     </div>
@@ -490,7 +490,7 @@ ga('send', 'pageview');
         gitURL = "Source: http://git.openstack.org/cgit/openstack/openstack-manuals/tree/doc/install-guide/source" + "/" + sourceFile;
 
     /* gitsha, project and bug_tag rely on variables in conf.py */
-    var gitSha = "SHA: bafa0de0ca68a7c497cadd768a7572cf29b090fe";
+    var gitSha = "SHA: ab79de9486175687ee6205ccce4c8f7598c89032";
         var bugProject = "openstack-manuals";
     var bugTitle = "인스턴스 실행 in Installation Guide";
     var fieldTags = "install-guide";
@@ -498,7 +498,7 @@ ga('send', 'pageview');
     /* "last_updated" is the build date and time. It relies on the
        conf.py variable "html_last_updated_fmt", which should include
        year/month/day as well as hours and minutes                   */
-    var buildstring = "Release: 0.1 on 2016-01-10 10:51";
+    var buildstring = "Release: 0.1 on 2016-01-16 01:30";
 
     var fieldComment = encodeURI(buildstring) +
                        lineFeed + encodeURI(gitSha) +

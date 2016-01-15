@@ -3,7 +3,7 @@
   <head>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
 
-    <title>OpenStack Docs: Glossary</title>
+    <title>OpenStack Docs: 용어집</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -149,7 +149,7 @@ ga('send', 'pageview');
         <div class="col-lg-9 col-md-8 col-sm-8 col-lg-push-3 col-md-push-4 col-sm-push-4">
 <div class="row">
   <div class="col-lg-8">
-    <h2>Glossary</h2>
+    <h2>용어집</h2>
   </div>
   <div class="docs-actions">
     
@@ -160,108 +160,90 @@ ga('send', 'pageview');
   </div>
 </div>
           <div class="row docs-byline">
-            <div class="docs-updated">updated: 2016-01-10 10:51</div>
+            <div class="docs-updated">updated: 2016-01-16 01:29</div>
           </div>
           <div class="row">
             <div class="col-lg-12">
               <div class="docs-top-contents">
                 <h5><a href="../index.html">Contents</a></h5>
                 <ul>
-<li><a class="reference internal" href="#">Glossary</a></li>
+<li><a class="reference internal" href="#">용어집</a></li>
 </ul>
 
               </div>
               <div class="docs-body">
 
   <div class="section" id="glossary">
-<h1>Glossary<a class="headerlink" href="#glossary" title="제목 주소">¶</a></h1>
-<p>This glossary offers a list of terms and definitions to define a
-vocabulary for OpenStack-related concepts.</p>
-<p>To add to OpenStack glossary, clone the <a class="reference external" href="https://git.openstack.org/cgit/openstack/openstack-manuals">openstack/openstack-manuals repository</a> and update the source file
-<code class="file docutils literal"><span class="pre">doc/glossary/glossary-terms.xml</span></code> through the
-OpenStack contribution process.</p>
+<h1>용어집<a class="headerlink" href="#glossary" title="제목 주소">¶</a></h1>
+<p>이 용어집은 OpenStack에 관련된 개념에 대한 용어를 정의하고 정의된 용어의 목록을 제공합니다.</p>
+<p>OpenStack 용어집에 추가하기 원한다면, <a class="reference external" href="https://git.openstack.org/cgit/openstack/openstack-manuals">openstack/openstack-manuals repository</a> 를 클론 한뒤 <code class="file docutils literal"><span class="pre">doc/glossary/glossary-terms.xml</span></code> 소스파일을 OpenStack 컨트리뷰션 프로세스에 맞춰 업로드하세요.</p>
 <dl class="glossary docutils">
 <dt id="term-to4">6to4</dt>
-<dd>A mechanism that allows IPv6 packets to be transmitted
-over an IPv4 network, providing a strategy for migrating to
-IPv6.</dd>
-<dt id="term-absolute-limit">absolute limit</dt>
-<dd>Impassable limits for guest VMs. Settings include total RAM
-size, maximum number of vCPUs, and maximum disk size.</dd>
-<dt id="term-access-control-list">access control list</dt>
-<dd>A list of permissions attached to an object. An ACL specifies
-which users or system processes have access to objects. It also
-defines which operations can be performed on specified objects. Each
-entry in a typical ACL specifies a subject and an operation. For
-instance, the ACL entry <cite>(Alice, delete)</cite> for a file gives
-Alice permission to delete the file.</dd>
-<dt id="term-access-key">access key</dt>
-<dd>Alternative term for an Amazon EC2 access key. See EC2 access
-key.</dd>
-<dt id="term-account">account</dt>
+<dd><p class="first last">IPv6로의 마이그레이션을 제공하고 IPv4 네트워크를 통해 IPv6 패킷을 전송할 수 있도록 허용하는 메커니즘을 말합니다.</p>
+</dd>
+<dt id="term-absolute-limit">절대 임계치</dt>
+<dd><p class="first last">게스트 VM에대한 가능한 임계치를 나타냅니다. 이 설정에는 총 RAM 크기, 최대 vCPU 개수, 최대 디스크 크기를 포함합니다.</p>
+</dd>
+<dt id="term-access-control-list">접근 제어 목록</dt>
+<dd><p class="first last">개체에 부여하는 권한 목록. ACL은 개체에 접근 가능한 사용자 또는 시스템 프로세스를 규정합니다. 또한 지정된 개체에 대해 어떤 작업이 수행 가능한지를 정의합니다. 일반적인 ACL 내 각 항목에는 제목 및 작업을 지정합니다. 예를 들면, 어떤 파일에 대한 ACL 항목 <a href="#id1"><span class="problematic" id="id2">`</span></a>(Alice, delete)`은 Alice에게 파일을 삭제하는 권한을 부여합니다.</p>
+</dd>
+<dt id="term-access-key">접근 키</dt>
+<dd><p class="first last">Amazon EC2 접근 키에 대한 다른 용어. EC2 접근 키 참조</p>
+</dd>
+<dt id="term-account">계정</dt>
 <dd><p class="first last">오브젝트 스토리지 컨텍스트에서의 계정입니다. Active Directory, /etc/passwd, OpenLDAP, OpenStack Identity 등 인증 서비스에서의 사용자 계정과 혼동하지 마십시오.</p>
 </dd>
-<dt id="term-account-auditor">account auditor</dt>
-<dd>Checks for missing replicas and incorrect or corrupted objects
-in a specified Object Storage account by running queries against the
-back-end SQLite database.</dd>
-<dt id="term-account-database">account database</dt>
-<dd>A SQLite database that contains Object Storage accounts and
-related metadata and that the accounts server accesses.</dd>
-<dt id="term-account-reaper">account reaper</dt>
-<dd>An Object Storage worker that scans for and deletes account
-databases and that the account server has marked for deletion.</dd>
+<dt id="term-account-auditor">계정 관리자</dt>
+<dd><p class="first last">백엔드 SQLite 데이터베이스에 대해 쿼리를 실행하여 지정된 오브젝트 저장 계정의 복제본 또는 잘못되거나 손상된 개체 누락을 확인합니다.</p>
+</dd>
+<dt id="term-account-database">계정 데이터베이스</dt>
+<dd><p class="first last">오브젝트 스토리지 계정 및 관련 메타데이터를 포함하고 계정 서버가 접근하는 SQLite 데이터베이스입니다.</p>
+</dd>
+<dt id="term-account-reaper">계정 수거자</dt>
+<dd><p class="first last">계정 데이터베이스에 대해 검색 및 삭제를 수행하고, 계정 서버가 삭제했음을 표시하는 오브젝트 스토리지 worker입니다.</p>
+</dd>
 <dt id="term-account-server">계정 서버</dt>
 <dd><p class="first last">오브젝트 스토리지 내 컨테이너 목록을 나열하고 컨테이너 정보를 계정 데이터베이스에 저장합니다.</p>
 </dd>
 <dt id="term-account-service">계정 서비스</dt>
 <dd><p class="first last">조회, 생성, 수정 및 감사와 같은 계정 서비스를 제공하는 오브젝트 스토리지 구성요소 입니다. OpenStack 인증 서비스, OpenLDAP, 또는 비슷한 사용자 계정 서비스와 혼동하지 마십시오.</p>
 </dd>
-<dt id="term-accounting">accounting</dt>
-<dd>The Compute service provides accounting information through the
-event notification and system usage data facilities.</dd>
+<dt id="term-accounting">어카운팅</dt>
+<dd><p class="first last">Compute 서비스가 이벤트 통지 및 시스템 사용량 데이터 기능을 통해 계정 정보를 제공합니다.</p>
+</dd>
 <dt id="term-acl">ACL</dt>
 <dd><p class="first last">접근 제어 목록을 살펴봅니다.</p>
 </dd>
-<dt id="term-active-active-configuration">active/active configuration</dt>
-<dd>In a high-availability setup with an active/active
-configuration, several systems share the load together and if one
-fails, the load is distributed to the remaining systems.</dd>
+<dt id="term-active-active-configuration">액티브/액티브 구성</dt>
+<dd><p class="first last">액티브/액티브 구성으로 된 고가용성 설정에서는 여러 시스템들이 부하를 서로 공유하고, 하나가 실패하는 경우 해당 부하는 나머지 시스템에 분배됩니다.</p>
+</dd>
 <dt id="term-active-directory">Active Directory</dt>
 <dd><p class="first last">Microsoft의 인증 및 identity 서비스로, LDAP 기반입니다. OpenStack에서 지원합니다.</p>
 </dd>
-<dt id="term-active-passive-configuration">active/passive configuration</dt>
-<dd>In a high-availability setup with an active/passive
-configuration, systems are set up to bring additional resources online
-to replace those that have failed.</dd>
-<dt id="term-address-pool">address pool</dt>
-<dd>A group of fixed and/or floating IP addresses that are assigned
-to a project and can be used by or assigned to the VM instances in a
-project.</dd>
-<dt id="term-admin-api">admin API</dt>
-<dd>A subset of API calls that are accessible to authorized
-administrators and are generally not accessible to end users or the
-public Internet. They can exist as a separate service (keystone) or
-can be a subset of another API (nova).</dd>
-<dt id="term-admin-server">admin server</dt>
+<dt id="term-active-passive-configuration">액티브/패시브 구성</dt>
+<dd><p class="first last">액티브/패시브 구성으로 된 고가용성 설정에서 실패한 부분을 온라인으로 대체 가능한 부가적인 자원들을 가져오도록 시스템을 설정합니다.</p>
+</dd>
+<dt id="term-address-pool">주소 풀</dt>
+<dd><p class="first last">프로젝트에 할당되었거나, 프로젝트에 있는 VM 인스턴스에 할당되어 사용할 수 있는 고정 IP이거나 유동 IP 주소 그룹을 나타냅니다.</p>
+</dd>
+<dt id="term-admin-api">관리자 API</dt>
+<dd><p class="first last">인증된 관리자에 의해 접근이 가능하고, 일반적으로 최종 사용자 또는 공용 인터넷에서는 접근 불가능한 API call의 부분 집합. 별도 서비스 (keystone) 또는 또 다른 API (nova)의 부분집합으로 존재 가능.</p>
+</dd>
+<dt id="term-admin-server">관리자 서버</dt>
 <dd><p class="first last">인증 서비스 콘텍스트에서, admin API에 액세스를 제공하는 작업 프로세스입니다.</p>
 </dd>
 <dt id="term-advanced-message-queuing-protocol-amqp">Advanced Message Queuing Protocol (AMQP)</dt>
-<dd>The open standard messaging protocol used by OpenStack
-components for intra-service communications, provided by RabbitMQ,
-Qpid, or ZeroMQ.</dd>
+<dd><p class="first last">내부 서비스 통신을 위한 OpenStack 구성요소로 사용되는 개방형 표준 메시징 프로토콜로, RabbitMQ, Qpid 또는 ZeroMQ가 제공함</p>
+</dd>
 <dt id="term-advanced-risc-machine-arm">Advanced RISC Machine (ARM)</dt>
-<dd>Lower power consumption CPU often found in mobile and embedded
-devices. Supported by OpenStack.</dd>
-<dt id="term-alert">alert</dt>
-<dd>The Compute service can send alerts through its notification
-system, which includes a facility to create custom notification
-drivers. Alerts can be sent to and displayed on the horizon
-dashboard.</dd>
-<dt id="term-allocate">allocate</dt>
-<dd>The process of taking a floating IP address from the address
-pool so it can be associated with a fixed IP on a guest VM
-instance.</dd>
+<dd><p class="first last">모바일과 임베디드 장치에서 사용하는 저전력 CPU입니다. OpenStack 지원합니다.</p>
+</dd>
+<dt id="term-alert">알림</dt>
+<dd><p class="first last">Compute 서비스는 사용자 정의 통지 드라이버를 생성할 수 있는 기능을 포함하는 통지 시스템을 통해 알림을 보낼 수 있습니다. 알림은 horizon 대시보드에서 보내거나 표시할 수 있습니다.</p>
+</dd>
+<dt id="term-allocate">할당</dt>
+<dd><p class="first last">주소 pool로부터 floating IP 주소를 가져오는 프로세스로 게스트 VM 인스턴스에서 fixed IP에 연계 가능함.</p>
+</dd>
 <dt id="term-amazon-kernel-image-aki">Amazon Kernel Image (AKI)</dt>
 <dd><p class="first last">VM 컨테이너 포맷 및 디스크 포맷을 의미. Image 서비스에서 지원함.</p>
 </dd>
@@ -272,18 +254,17 @@ instance.</dd>
 <dd><p class="first last">VM 컨테이너 포맷 및 디스크 포맷을 의미. Image 서비스에서 지원함.</p>
 </dd>
 <dt id="term-anvil">Anvil</dt>
-<dd>A project that ports the shell script-based project named
-DevStack to Python.</dd>
+<dd><p class="first last">Python으로 구성되어있는 DevStack을 셸 스크립트 기반 프로젝트의 이름입니다.</p>
+</dd>
 <dt id="term-apache">Apache</dt>
-<dd>The Apache Software Foundation supports the Apache community of
-open-source software projects. These projects provide software
-products for the public good.</dd>
+<dd><p class="first last">아파치 소프트웨어 재단은 오픈소스 소프트웨어 프로젝트의 아파치 커뮤니티를 지원합니다. 해당 프로젝트들은 공공의 이익을 위한 소프트웨어 제품을 제공합니다.</p>
+</dd>
 <dt id="term-apache-license-2-0">Apache License 2.0</dt>
-<dd>All OpenStack core projects are provided under the terms of the
-Apache License 2.0 license.</dd>
+<dd><p class="first last">모든 OpenStack 코어 프로젝트는 Apache License 2.0 라이센스하에 제공됩니다.</p>
+</dd>
 <dt id="term-apache-web-server">Apache 웹 서버</dt>
-<dd>The most common web server software currently used on the
-Internet.</dd>
+<dd><p class="first last">현재 인터넷에서 사용되고 있는 가장 일반적인 웹 서버 소프트웨어</p>
+</dd>
 <dt id="term-api">API</dt>
 <dd><p class="first last">응용프로그램 프로그래밍 인터페이스.</p>
 </dd>
@@ -291,82 +272,77 @@ Internet.</dd>
 <dd><p class="first last">클라이언트가 API에 접근하기 위해 통신을 수행하는 데몬, 워커 또는 서비스. API 엔드 포인트는 인증, 데이터 세일즈, 성능 측정, Compute VM 명령어, 인구 조사 데이터 등과 같은 임의의 서비스에 제공합니다.</p>
 </dd>
 <dt id="term-api-extension">API 확장</dt>
-<dd>Custom modules that extend some OpenStack core APIs.</dd>
+<dd><p class="first last">일부 OpenStack 코어 API를 확장하는 사용자 정의 모듈을 말합니다.</p>
+</dd>
 <dt id="term-api-extension-plug-in">API 확장 플러그인</dt>
-<dd>Alternative term for a Networking plug-in or Networking API
-extension.</dd>
+<dd><p class="first last">네트워킹 플러그인이나 네트워킹 API 확장에 대한 대체 용어입니다.</p>
+</dd>
 <dt id="term-api-key">API 키</dt>
-<dd>Alternative term for an API token.</dd>
-<dt id="term-api-server">API server</dt>
-<dd>Any node running a daemon or worker that provides an API
-endpoint.</dd>
-<dt id="term-api-token">API token</dt>
-<dd>Passed to API requests and used by OpenStack to verify that the
-client is authorized to run the requested operation.</dd>
-<dt id="term-api-version">API version</dt>
-<dd>In OpenStack, the API version for a project is part of the URL.
-For example, <code class="file docutils literal"><span class="pre">example.com/nova/v1/foobar</span></code>.</dd>
-<dt id="term-applet">applet</dt>
-<dd>A Java program that can be embedded into a web page.</dd>
+<dd><p class="first last">API 토큰의 대체 용어입니다.</p>
+</dd>
+<dt id="term-api-server">API 서버</dt>
+<dd><p class="first last">API 엔드 포인트를 제공하는 데몬이나 워커를 실행하는 노드입니다.</p>
+</dd>
+<dt id="term-api-token">API 토큰</dt>
+<dd><p class="first last">API 요청을 전송하고, OpenStack을 사용하는데 있어 클라이언트가 요청한 작업을 할 수 있는 권한이 있는지 확인합니다.</p>
+</dd>
+<dt id="term-api-version">API 버전</dt>
+<dd><p class="first last">OpenStack에서, 프로젝트에 대한 API 버전이 URL 일부분으로 되어 있습니다. 예를 들면 :file:<a href="#id1"><span class="problematic" id="id2">`</span></a>example.com/nova/v1/foobar`와 같습니다.</p>
+</dd>
+<dt id="term-applet">애플릿</dt>
+<dd><p class="first last">웹페이지 내에 포함할 수 있는 자바 프로그램</p>
+</dd>
 <dt id="term-application-programming-interface-api">Application Programming Interface (API)</dt>
-<dd>A collection of specifications used to access a service,
-application, or program. Includes service calls, required parameters
-for each call, and the expected return values.</dd>
+<dd><p class="first last">서비스, 응용 프로그램, 또는 프로그램에서 사용되는 명세에 대한 집합. 각 call에 대해 필요로 하는 파라메터에 해당하는 서비스 요청과 예상되는 리턴 값을 포함.</p>
+</dd>
 <dt id="term-application-catalog">응용 프로그램 카탈로그</dt>
 <dd><p class="first last">응용 프로그램 카탈로그 서비스를 제공하여 사용자가 응용 프로그램 수명주기를 관리하는 동안 응용 프로그램 추상화 레벨에서 복합 환경을 작성하고 배포 가능하도록 제공하는 OpenStack 프로젝트입니다. 프로젝트 코드 이름은 murano입니다.</p>
 </dd>
-<dt id="term-application-server">application server</dt>
-<dd>A piece of software that makes available another piece of
-software over a network.</dd>
-<dt id="term-application-service-provider-asp">Application Service Provider (ASP)</dt>
-<dd>Companies that rent specialized applications that help
-businesses and organizations provide additional services
-with lower cost.</dd>
-<dt id="term-address-resolution-protocol-arp">Address Resolution Protocol (ARP)</dt>
-<dd>The protocol by which layer-3 IP addresses are resolved into
-layer-2 link local addresses.</dd>
+<dt id="term-application-server">어플리케이션 서버</dt>
+<dd><p class="first last">네트워크 상의 다른 소프트웨어 부분을 활용 가능하게 만들어 주는 소프트웨어의 한 부분</p>
+</dd>
+<dt id="term-application-service-provider-asp">어플리케이션 서비스 프로바이더 (ASP)</dt>
+<dd><p class="first last">기업 및 기관에게 부가적인 서비스들을 보다 낮은 가격에 제공하도록 돕는 특화된 어플리케이션을 임대하는 회사</p>
+</dd>
+<dt id="term-address-resolution-protocol-arp">주소 변환 프로토콜 (ARP)</dt>
+<dd><p class="first last">layer-3 IP 주소에서 layer-2 링크 로컬 주소로 변환되는 방법에 대한 프토토콜</p>
+</dd>
 <dt id="term-arptables">arptables</dt>
-<dd>Tool used for maintaining Address Resolution Protocol packet
-filter rules in the Linux kernel firewall modules. Used along with
-iptables, ebtables, and ip6tables in Compute to provide firewall
-services for VMs.</dd>
-<dt id="term-associate">associate</dt>
-<dd>The process associating a Compute floating IP address with a
-fixed IP address.</dd>
-<dt id="term-asynchronous-javascript-and-xml-ajax">Asynchronous JavaScript and XML (AJAX)</dt>
-<dd>A group of interrelated web development techniques used on the
-client-side to create asynchronous web applications. Used extensively
-in horizon.</dd>
+<dd><p class="first last">Linux 커널 방화벽 모듈 내 주소 변환 프로토콜 패킷 필터 규칙을 유지하기 이해 사용하는 도구. Compute 내에서 방화벽 서비스를 VM에 제공하기 위해 iptables, ebtables 및 ip6tables와 함께 사용됨</p>
+</dd>
+<dt id="term-associate">연결</dt>
+<dd><p class="first last">Compute floating IP 주소를 fixed IP 주소와 연결시키는 과정</p>
+</dd>
+<dt id="term-asynchronous-javascript-and-xml-ajax">비동기 JavaScript와 XML  (AJAX)</dt>
+<dd><p class="first last">비동기 웹 어플리케이션을 제작하기 위해 클라이언트 사이드에서 사용되는 상호 관련이 있는 웹 개발 테크닉의 모음. horizon에서 광범위하게 사용됨.</p>
+</dd>
 <dt id="term-ata-over-ethernet-aoe">ATA over Ethernet (AoE)</dt>
-<dd>A disk storage protocol tunneled within Ethernet.</dd>
-<dt id="term-attach">attach</dt>
-<dd>The process of connecting a VIF or vNIC to a L2 network in
-Networking. In the context of Compute, this process connects a storage
-volume to an instance.</dd>
-<dt id="term-attachment-network">attachment (network)</dt>
-<dd>Association of an interface ID to a logical port. Plugs an
-interface into a port.</dd>
+<dd><p class="first last">Ethernet 내 터널링되어 있는 디스크 스토리지 프로토콜</p>
+</dd>
+<dt id="term-attach">연결</dt>
+<dd><p class="first last">네트워킹에서 L2 네트워크와 vNIC이나 VIF의 연결 프로세스를 나타냅니다. Compute의 콘텍스트에서 이 프로세서는 인스턴스 스토리지 볼륨과 연결됩니다.</p>
+</dd>
+<dt id="term-attachment-network">attachement (네트워크)</dt>
+<dd><p class="first last">논리적 포트에 인터페이스 ID 모음. 포트에 인터페이스를 연결합니다.</p>
+</dd>
 <dt id="term-auditing">auditing</dt>
-<dd>Provided in Compute through the system usage data
-facility.</dd>
+<dd><p class="first last">시스템이 사용하는 데이터 기능을 사용해서 Compute에 제공합니다.</p>
+</dd>
 <dt id="term-auditor">auditor</dt>
 <dd><p class="first last">오프젝트 스토리지 오브젝트, 컨테이너, 계정의 무결성을 검사하는 프로세스입니다. Auditors 는 오브젝트 스토리지 계정 auditor, 컨테이너 auditor, 오브젝트 auditor에 대한 전체를 다 말합니다.</p>
 </dd>
 <dt id="term-austin">Austin</dt>
-<dd>The code name for the initial release of
-OpenStack. The first design summit took place in
-Austin, Texas, US.</dd>
-<dt id="term-auth-node">auth node</dt>
-<dd>Alternative term for an Object Storage authorization
-node.</dd>
-<dt id="term-authentication">authentication</dt>
-<dd>The process that confirms that the user, process, or client is
-really who they say they are through private key, secret token,
-password, fingerprint, or similar method.</dd>
-<dt id="term-authentication-token">authentication token</dt>
-<dd>A string of text provided to the client after authentication.
-Must be provided by the user or process in subsequent requests to the
-API endpoint.</dd>
+<dd><p class="first last">OpenStack의 초기 릴리즈 코드 이름. 첫 디자인 서밋을 한 곳인 미국 텍사스 Austin을 나타냅니다.</p>
+</dd>
+<dt id="term-auth-node">auth 노드</dt>
+<dd><p class="first last">오브젝트 스토리지 authorization 노드에대한 대체 용어입니다.</p>
+</dd>
+<dt id="term-authentication">인증</dt>
+<dd><p class="first last">사용자, 프로세스 또는 클라인트 중 정말 누구가 말하는지를 개인 키, 암호화된 토큰, 암호, 지문과 비슷한 매소드들을 통해 확인하는 프로세스를 말합니다.</p>
+</dd>
+<dt id="term-authentication-token">인증 토큰</dt>
+<dd><p class="first last">인증후 클라이언트에 제공하는 텍스트 문자열입니다. API 엔드 포인트에서 이후에 요청된 프로세스나 사용자에의해 제공되어야합니다.</p>
+</dd>
 <dt id="term-authn">AuthN</dt>
 <dd><p class="first last">인증 서비스를 제공하는 Identity 서비스 컴포넌트</p>
 </dd>
@@ -379,56 +355,52 @@ API endpoint.</dd>
 <dt id="term-authz">AuthZ</dt>
 <dd><p class="first last">높은 수준의 인증 서비스를 제공하는 Identity 구성요소.</p>
 </dd>
-<dt id="term-auto-ack">Auto ACK</dt>
-<dd>Configuration setting within RabbitMQ that enables or disables
-message acknowledgment. Enabled by default.</dd>
-<dt id="term-auto-declare">auto declare</dt>
-<dd>A Compute RabbitMQ setting that determines whether a message
-exchange is automatically created when the program starts.</dd>
-<dt id="term-availability-zone">availability zone</dt>
-<dd>An Amazon EC2 concept of an isolated area that is used for fault
-tolerance. Do not confuse with an OpenStack Compute zone or
-cell.</dd>
+<dt id="term-auto-ack">자동 ACK</dt>
+<dd><p class="first last">메시지를 수락할 것인지에 대해 활성화 또는 비활성화를 RabbitMQ 내에서 구성하며, 디폴트로 활성화됨</p>
+</dd>
+<dt id="term-auto-declare">자동 선언</dt>
+<dd><p class="first last">메시지 교환 여부를 결정하는 Compute RabbitMQ 설정은 프로그램이 시작할 때 자동으로 생성됩니다.</p>
+</dd>
+<dt id="term-availability-zone">가용 구역</dt>
+<dd><p class="first last">Amazon EC2 컨셉에 따른 결함 포용을 위한 격리된 지역. OpenStack Compute 존 또는 셀과 혼동하지 마십시오.</p>
+</dd>
 <dt id="term-aws">AWS</dt>
-<dd>Amazon Web Services.</dd>
-<dt id="term-aws-cloudformation-template">AWS CloudFormation template</dt>
-<dd>AWS CloudFormation allows AWS users to create and manage a
-collection of related resources. The Orchestration service
-supports a CloudFormation-compatible format (CFN).</dd>
-<dt id="term-back-end">back end</dt>
-<dd>Interactions and processes that are obfuscated from the user,
-such as Compute volume mount, data transmission to an iSCSI target by
-a daemon, or Object Storage object integrity checks.</dd>
-<dt id="term-back-end-catalog">back-end catalog</dt>
-<dd>The storage method used by the Identity service catalog service
-to store and retrieve information about API endpoints that are
-available to the client. Examples include a SQL database, LDAP
-database, or KVS back end.</dd>
-<dt id="term-back-end-store">back-end store</dt>
+<dd><p class="first last">Amazon 웹 서비스.</p>
+</dd>
+<dt id="term-aws-cloudformation-template">AWS CloudFormation 템플릿</dt>
+<dd><p class="first last">AWS CloudFormation은 AWS 사용자들이 관련된 리소스 집합을 생성 및 관리를 가능하게 합니다. Orchestration 서비스는 CloudFormation과 호환되는 포맷 (CFN)을 지원합니다.</p>
+</dd>
+<dt id="term-back-end">백엔드</dt>
+<dd><p class="first last">Compute 볼륨 마운트, 데몬에 의한 iSCSI 대상으로의 데이터 전송, 또는 Object Storage 개체 무결성 확인과 같은 사용자에게 있어 파악하기 어려운 상호작용 및 프로세스</p>
+</dd>
+<dt id="term-back-end-catalog">백엔드 카탈로그</dt>
+<dd><p class="first last">클라이언트가 사용 가능한 API 엔드포인트에 대한 정보를 검색하고 저장하는 Identity 서비스 카탈로그 서비스에서 사용되는 스토리지 방식입니다. 예시로는 SQL 데이터베이스, LDAP 데이터베이스, 또는 KVS 백엔드가 있습니다.</p>
+</dd>
+<dt id="term-back-end-store">백엔드 저장소</dt>
 <dd>The persistent data store used to save and retrieve information
 for a service, such as lists of Object Storage objects, current state
 of guest VMs, lists of user names, and so on. Also, the method that the
 Image service uses to get and store VM images. Options include Object
 Storage, local file system, S3, and HTTP.</dd>
 <dt id="term-backup-restore-and-disaster-recovery-as-a-service">backup restore and disaster recovery as a service</dt>
-<dd>The OpenStack project that provides integrated tooling for
-backing up, restoring, and recovering file systems,
-instances, or database backups. The project name is freezer.</dd>
-<dt id="term-bandwidth">bandwidth</dt>
-<dd>The amount of available data used by communication resources,
-such as the Internet. Represents the amount of data that is used to
-download things or the amount of data available to download.</dd>
+<dd><p class="first last">백업, 복구, 그리고 파일시스템, 인스턴스 또는 데이터베이스 백업에 대한 복원을 위한 통합 툴을 제공하는 OpenStack 프로젝트입니다. 프로젝트 이름은 freezer입니다.</p>
+</dd>
+<dt id="term-bandwidth">대역폭</dt>
+<dd><p class="first last">인터넷과같은 통신 자원에 의해 사용되는 가용한 데이터의 양 입니다. 다운로드에 사용되는 데이터의 양 또는 다운로드 가능한 데이터의 양을 나타냅니다.</p>
+</dd>
 <dt id="term-barbican">barbican</dt>
-<dd>Code name of the key management service for OpenStack.</dd>
+<dd><p class="first last">OpenStack을 위한 키 관리 서비스의 코드 이름입니다.</p>
+</dd>
 <dt id="term-bare">bare</dt>
 <dd>An Image service container format that indicates that no
 container exists for the VM image.</dd>
-<dt id="term-bare-metal-service">Bare metal service</dt>
-<dd>OpenStack project that provisions bare metal, as opposed to
-virtual, machines. The code name for the project is ironic.</dd>
-<dt id="term-base-image">base image</dt>
-<dd>An OpenStack-provided image.</dd>
-<dt id="term-bell-lapadula-model">Bell-LaPadula model</dt>
+<dt id="term-bare-metal-service">베어메탈 서비스</dt>
+<dd><p class="first last">가상머신과 상반되는, 베어메탈을 프로비저닝하는 OpenStack 프로젝트. 프로젝트 코드 이름은 ironic입니다.</p>
+</dd>
+<dt id="term-base-image">기본 이미지</dt>
+<dd><p class="first last">OpenStack에서 제공하는 이미지.</p>
+</dd>
+<dt id="term-bell-lapadula-model">Bell-LaPadula 모델</dt>
 <dd>A security model that focuses on data confidentiality
 and controlled access to classified information.
 This model divide the entities into subjects and objects.
@@ -447,16 +419,16 @@ included only Compute (nova) and Object Storage (swift).
 Bexar is the code name for the second release of
 OpenStack. The design summit took place in
 San Antonio, Texas, US, which is the county seat for Bexar county.</dd>
-<dt id="term-binary">binary</dt>
+<dt id="term-binary">2진법의</dt>
 <dd>Information that consists solely of ones and zeroes, which is
 the language of computers.</dd>
-<dt id="term-bit">bit</dt>
+<dt id="term-bit">비트</dt>
 <dd>A bit is a single digit number that is in base of 2 (either a
 zero or one). Bandwidth usage is measured in bits per second.</dd>
-<dt id="term-bits-per-second-bps">bits per second (BPS)</dt>
-<dd>The universal measurement of how quickly data is transferred
-from place to place.</dd>
-<dt id="term-block-device">block device</dt>
+<dt id="term-bits-per-second-bps">초당 비트(BPS)</dt>
+<dd><p class="first last">얼마나 데이터가 빠른지에 대한 보편적인 방법은 여러곳으로 전송된다.</p>
+</dd>
+<dt id="term-block-device">블록 디바이스</dt>
 <dd>A device that moves data in the form of blocks. These device
 nodes interface the devices, such as hard disks, CD-ROM drives, flash
 drives, and other addressable regions of memory.</dd>
@@ -466,9 +438,8 @@ from one host to another with very little downtime during a
 user-initiated switchover. Does not require shared storage. Supported
 by Compute.</dd>
 <dt id="term-block-storage">블록 스토리지</dt>
-<dd>The OpenStack core project that enables management of volumes,
-volume snapshots, and volume types. The project name of Block Storage
-is cinder.</dd>
+<dd><p class="first last">OpenStack은 volume, volume snapshots, volume types의 관리를 가능케 하는것이 프로젝트가 핵심이다.  Block Storage의 프로젝</p>
+</dd>
 <dt id="term-block-storage-api">Block Storage API</dt>
 <dd>An API on a separate endpoint for attaching,
 detaching, and creating block storage for compute
@@ -479,10 +450,10 @@ architecture, which is a specialized micro-controller that is embedded
 on the motherboard of a computer and acts as a server. Manages the
 interface between system management software and platform
 hardware.</dd>
-<dt id="term-bootable-disk-image">bootable disk image</dt>
-<dd>A type of VM image that exists as a single, bootable
-file.</dd>
-<dt id="term-bootstrap-protocol-bootp">Bootstrap Protocol (BOOTP)</dt>
+<dt id="term-bootable-disk-image">부팅 가능한 디스크 이미지</dt>
+<dd><p class="first last">단독으로 존재하는 하는 VM이미지의 타입은 부팅가능한 파일.</p>
+</dd>
+<dt id="term-bootstrap-protocol-bootp">부트스트랩 프로토콜</dt>
 <dd>A network protocol used by a network client to obtain an IP
 address from a configuration server. Provided in Compute through the
 dnsmasq daemon when using either the FlatDHCP manager or VLAN manager
@@ -508,7 +479,7 @@ environment is resource constrained.</dd>
 start, stop, and suspend VMs are in one class. Buttons to associate
 and disassociate floating IP addresses are in another class, and so
 on.</dd>
-<dt id="term-byte">byte</dt>
+<dt id="term-byte">바이트</dt>
 <dd>Set of bits that make up a single character; there are usually 8
 bits to a byte.</dd>
 <dt id="term-ca">CA</dt>
@@ -611,51 +582,44 @@ its children.</dd>
 <dd>A core OpenStack project that provides block storage services
 for VMs.</dd>
 <dt id="term-cirros">CirrOS</dt>
-<dd>A minimal Linux distribution designed for use as a test
-image on clouds such as OpenStack.</dd>
-<dt id="term-cisco-neutron-plug-in">Cisco neutron plug-in</dt>
-<dd>A Networking plug-in for Cisco devices and technologies,
-including UCS and Nexus.</dd>
-<dt id="term-cloud-architect">cloud architect</dt>
-<dd>A person who plans, designs, and oversees the creation of
-clouds.</dd>
-<dt id="term-cloud-computing">cloud computing</dt>
-<dd>A model that enables access to a shared pool of configurable
-computing resources, such as networks, servers, storage, applications,
-and services, that can be rapidly provisioned and released with
-minimal management effort or service provider interaction.</dd>
-<dt id="term-cloud-controller">cloud controller</dt>
-<dd>Collection of Compute components that represent the global state
-of the cloud; talks to services, such as Identity authentication,
-Object Storage, and node/storage workers through a
-queue.</dd>
-<dt id="term-cloud-controller-node">cloud controller node</dt>
-<dd>A node that runs network, volume, API, scheduler, and image
-services. Each service may be broken out into separate nodes for
-scalability or availability.</dd>
-<dt id="term-cloud-data-management-interface-cdmi">Cloud Data Management Interface (CDMI)</dt>
-<dd>SINA standard that defines a RESTful API for managing objects in
-the cloud, currently unsupported in OpenStack.</dd>
-<dt id="term-cloud-infrastructure-management-interface-cimi">Cloud Infrastructure Management Interface (CIMI)</dt>
-<dd>An in-progress specification for cloud management. Currently
-unsupported in OpenStack.</dd>
+<dd><p class="first last">OpenStack과 같은 클라우드상에 테스트 이미지로써 사용되도록 설계된 최소한의 Linux 배포판입니다.</p>
+</dd>
+<dt id="term-cisco-neutron-plug-in">시스코 neutron 플러그인</dt>
+<dd><p class="first last">UCS와 Nexus를 포함하는, 시스코 장비와 기술을 위한 Networking 플러그인 입니다.</p>
+</dd>
+<dt id="term-cloud-architect">클라우드 아키텍트</dt>
+<dd><p class="first last">클라우드의 생성을 계획하고, 설계하고, 그리고 감독하는 사람입니다.</p>
+</dd>
+<dt id="term-cloud-computing">클라우드 컴퓨팅</dt>
+<dd><p class="first last">네트워크, 서버, 스토리지, 어플리케이션, 그리고 서비스와 같은 설정가능한 컴퓨팅 자원들의 공유 풀에대한 접근을 가능하게 하는 모델으로써, 최소한의 관리에 대한 수고 또는 최소한의 서비스 제공자와의 상호작용으로 신속하게 프로비저닝과 릴리즈를 수행할 수 있습니다.</p>
+</dd>
+<dt id="term-cloud-controller">클라우드 컨트롤러</dt>
+<dd><p class="first last">클라우드의 전역적 상태를 나타내는 Compute 구성요소들의 집합입니다; Identity 인증, Object Storage, 그리고 노드/스토리지 작업자등과 같은 서비스들과 큐를 사용하여 정보를 교환합니다.</p>
+</dd>
+<dt id="term-cloud-controller-node">클라우드 컨트롤러 노드</dt>
+<dd><p class="first last">네트워크, 볼륨, API, 스케쥴러, 그리고 이미지 서비스를 실행하는 노드. 각각의 서비스는 확장성 또는 가용성을 위하여 별도의 노드로 분리될 수 있습니다.</p>
+</dd>
+<dt id="term-cloud-data-management-interface-cdmi">클라우드 데이터 관리 인터페이스 (CDMI)</dt>
+<dd><p class="first last">클라우드내의 객체들을 관리하는 RESTful API를 규정한 SINA 표준으로써, 현재 OpenStack에서는 지원되지 않습니다.</p>
+</dd>
+<dt id="term-cloud-infrastructure-management-interface-cimi">클라우드 인프라 관리 인터페이스 (CIMI)</dt>
+<dd><p class="first last">클라우드 관리를 위한 작업진행중인 스펙으로써, 현재 OpenStack에서는 지원되지 않습니다.</p>
+</dd>
 <dt id="term-cloud-init">cloud-init</dt>
-<dd>A package commonly installed in VM images that performs
-initialization of an instance after boot using information that it
-retrieves from the metadata service, such as the SSH public key and
-user data.</dd>
+<dd><p class="first last">VM 이미지에 보편적으로 설치되어있는 패키지로써 부팅 이후에 SSH 공개키와 사용자 데이터들과 같은 정보들을 metadata 서비스로부터 받아와 인스턴스의 초기화를 수행합니다.</p>
+</dd>
 <dt id="term-cloudadmin">cloudadmin</dt>
-<dd>One of the default roles in the Compute RBAC system. Grants
-complete system access.</dd>
+<dd><p class="first last">Compute RBAC 시스템의 기본 역할중 하나로써 완전한 시스템 접근을 허가합니다.</p>
+</dd>
 <dt id="term-cloudbase-init">Cloudbase-Init</dt>
-<dd>A Windows project providing guest initialization features,
-similar to cloud-init.</dd>
+<dd><p class="first last">cloud-init과 유사한, 게스트 초기화 기능을 제공하는 Windows 프로젝트입니다.</p>
+</dd>
 <dt id="term-cloudpipe">cloudpipe</dt>
-<dd>A compute service that creates VPNs on a per-project
-basis.</dd>
-<dt id="term-cloudpipe-image">cloudpipe image</dt>
-<dd>A pre-made VM image that serves as a cloudpipe server.
-Essentially, OpenVPN running on Linux.</dd>
+<dd><p class="first last">프로젝트 별로 VPN을 생성하는 compute 서비스입니다.</p>
+</dd>
+<dt id="term-cloudpipe-image">cloudpipe 이미지</dt>
+<dd><p class="first last">cloudpipe 서버로 사용되는 미리 만들어진 VM 이미지입니다. 근본적으로, Linux상에서 동작하는 OpenVPN 입니다.</p>
+</dd>
 <dt id="term-clustering">Clustering</dt>
 <dd>The OpenStack project that OpenStack project that implements
 clustering services and libraries for the management of
@@ -663,58 +627,50 @@ groups of homogeneous objects exposed by other OpenStack
 services. The project name of Clustering service is
 senlin.</dd>
 <dt id="term-cmdb">CMDB</dt>
-<dd>Configuration Management Database.</dd>
+<dd><p class="first last">설정 관리 데이터베이스</p>
+</dd>
 <dt id="term-congress">congress</dt>
-<dd>OpenStack project that provides the Governance service.</dd>
-<dt id="term-command-filter">command filter</dt>
-<dd>Lists allowed commands within the Compute rootwrap
-facility.</dd>
-<dt id="term-common-internet-file-system-cifs">Common Internet File System (CIFS)</dt>
-<dd>A file sharing protocol. It is a public or open variation of the
-original Server Message Block (SMB) protocol developed and used by
-Microsoft. Like the SMB protocol, CIFS runs at a higher level and uses
-the TCP/IP protocol.</dd>
-<dt id="term-community-project">community project</dt>
-<dd>A project that is not officially endorsed by the OpenStack
-Foundation. If the project is successful enough, it might be elevated
-to an incubated project and then to a core project, or it might be
-merged with the main code trunk.</dd>
-<dt id="term-compression">compression</dt>
-<dd>Reducing the size of files by special encoding, the file can be
-decompressed again to its original content. OpenStack supports
-compression at the Linux file system level but does not support
-compression for things such as Object Storage objects or Image service
-VM images.</dd>
+<dd><p class="first last">Governance 서비스를 제공하는 OpenStack 프로젝트입니다.</p>
+</dd>
+<dt id="term-command-filter">명령어 필터</dt>
+<dd><p class="first last">rootwrap 기능상에서 허용된 명령어들의 목록입니다.</p>
+</dd>
+<dt id="term-common-internet-file-system-cifs">공통 인터넷 파일 시스템 (Common Internet File System, 이하 CIFS)</dt>
+<dd><p class="first last">원래 마이크로소프트에서 개발되어 사용되던 서버 메시지 블럭 (Server Message Block, 이하 SMB) 프로토콜의 변형으로써 공개된 파일 공유 프로토콜입니다. SMB 프로토콜과 같이 CIFS 는 TCP/IP 프로토콜을 사용하여 상위 레벨에서 작동합니다.</p>
+</dd>
+<dt id="term-community-project">커뮤니티 프로젝트</dt>
+<dd><p class="first last">오픈스택재단에 의해 공식적으로 인정받지 못한 프로젝트. 만약 이 프로젝트가 충분히 성공적이라면 인큐베이터 프로젝트, 또는 코어 프로젝트로 상향 조정될 수 있으며 궁극적으 메인 코드 부분에 포함될 수 있습니다.</p>
+</dd>
+<dt id="term-compression">압축</dt>
+<dd><p class="first last">특별한 인코딩 기법을 사용하여 파일의 크기를 줄입니다. 압축된 파일은 다시 원래대로 복원할 수 있습니다. 오픈스택에서 제공하는 압축방식은 Linux 파일 시스템에 포함된 기법을 사용하나 Object Storage 객체 또는 VM 이미지들을 위한 Image 서비스 같은 압축은 지원하지 않습니다.</p>
+</dd>
 <dt id="term-compute">Compute</dt>
-<dd>The OpenStack core project that provides compute services. The
-project name of Compute service is nova.</dd>
+<dd><p class="first last">오픈스택 코어 프로젝트에서는 Compute 서비스를 제공합니다. 이 프로젝트를 노바 (nova) 라 부릅니다.</p>
+</dd>
 <dt id="term-compute-api">Compute API</dt>
-<dd>The nova-api daemon
-provides access to nova services. Can communicate with other APIs,
-such as the Amazon EC2 API.</dd>
-<dt id="term-compute-controller">compute controller</dt>
-<dd>The Compute component that chooses suitable hosts on which to
-start VM instances.</dd>
-<dt id="term-compute-host">compute host</dt>
-<dd>Physical host dedicated to running compute nodes.</dd>
-<dt id="term-compute-node">compute node</dt>
-<dd>A node that runs the nova-compute daemon that manages VM
-instances that provide a wide
-range of services, such as web applications and analytics.</dd>
-<dt id="term-compute-service">Compute service</dt>
-<dd>Name for the Compute component that manages VMs.</dd>
-<dt id="term-compute-worker">compute worker</dt>
-<dd>The Compute component that runs on each compute node and manages
-the VM instance life cycle, including run, reboot, terminate,
-attach/detach volumes, and so on. Provided by the nova-compute daemon.</dd>
-<dt id="term-concatenated-object">concatenated object</dt>
-<dd>A set of segment objects that Object Storage combines and sends
-to the client.</dd>
+<dd><p class="first last">노바-API 데몬 (디먼) (nova-api daemon)을 통해 노바 서비스를 이용합니다. 또한 다른 프레임워크에서 제공하는 API 들도 사용가능해 짐에 따라 프레임워크간 대화가 가능합니다.</p>
+</dd>
+<dt id="term-compute-controller">Compute 컨트롤러</dt>
+<dd><p class="first last">Compute 컴포넌트가 VM 인스턴스들을 시작하기 위해서 이들이 작동할 적당한 호스트를 선택합니다.</p>
+</dd>
+<dt id="term-compute-host">Compute 호스트</dt>
+<dd><p class="first last">Compute 노드들을 실행시키도록 할당된 실제 호스트</p>
+</dd>
+<dt id="term-compute-node">Compute 노드</dt>
+<dd><p class="first last">노바 Compute 디먼 (데몬)이 실행되는 노드를 통해 VM 인스턴스들을 관리합니다. 이런 VM 인스턴스들은 웹 어플리케이션이나 애널리틱스와 같은 다양한 서비스를 제공할 수 있습니다.</p>
+</dd>
+<dt id="term-compute-service">Compute 서비스</dt>
+<dd><p class="first last">VM 들을 관리하는 Compute 컴포넌트들의 명칭</p>
+</dd>
+<dt id="term-compute-worker">Compute 워커</dt>
+<dd><p class="first last">각각의 Compute 노드에서 실행되는 Compute 컴포넌트로써 VM 인스턴스를 실행시키는 것은 물론 재부팅, 종료, 볼륨 연결 및 해제 등의 모든 행위들을 관리한다. 노바 Compute 디먼이 제공한다.</p>
+</dd>
+<dt id="term-concatenated-object">연쇄 객체 (concatenated object)</dt>
+<dd><p class="first last">Object Storage 에 의해 결합된 일련의 객체들의 집합으로써 클라이언트에 보내집니다.</p>
+</dd>
 <dt id="term-conductor">conductor</dt>
-<dd>In Compute, conductor is the process that proxies database
-requests from the compute process. Using conductor improves security
-because compute nodes do not need direct access to the
-database.</dd>
+<dd><p class="first last">Compute에서 conductor 는 Compute 프로세스로 부터 데이터베이스 요청을 대행하는 프로세스입니다. Conductor 를 이용함으로써, Compute 노드들이 데이터베이스에 직접 접근할 필요가 없기 때문에  보안 성능을 향상시킬 수 있습니다.</p>
+</dd>
 <dt id="term-consistency-window">consistency window</dt>
 <dd>The amount of time it takes for a new Object Storage object to
 become accessible to all clients.</dd>
@@ -764,48 +720,38 @@ Database service (trove), Bare Metal service (ironic),
 Data processing service (sahara). However, this
 definition is changing based on
 community discussions about the &#8220;Big Tent&#8221;.</dd>
-<dt id="term-cost">cost</dt>
-<dd>Under the Compute distributed scheduler, this is calculated by
-looking at the capabilities of each host relative to the flavor of the
-VM instance being requested.</dd>
-<dt id="term-credentials">credentials</dt>
-<dd>Data that is only known to or accessible by a user and
-used to verify that the user is who he says he is.
-Credentials are presented to the server during
-authentication. Examples include a password, secret key,
-digital certificate, and fingerprint.</dd>
-<dt id="term-cross-origin-resource-sharing-cors">Cross-Origin Resource Sharing (CORS)</dt>
-<dd>A mechanism that allows many resources (for example,
-fonts, JavaScript) on a web page to be requested from
-another domain outside the domain from which the resource
-originated. In particular, JavaScript&#8217;s AJAX calls can use
-the XMLHttpRequest mechanism.</dd>
+<dt id="term-cost">비용</dt>
+<dd><p class="first last">Compute 분산 스케쥴러하에서, 요청이 발생하는 VM 인스턴스들의 성향에 의해 결정되는 각각의 호스트의 성능을 고려하여 비용이 산출됩니다.</p>
+</dd>
+<dt id="term-credentials">credentials (증명서)</dt>
+<dd><p class="first last">어떤 사용자만 알고 있거나  접근할 수 있는 데이터, 그리고 그 사용자가 누구인지를 증빙하기 위해 사용되는 데이터를 credentials (증명서) 라 합니다. 이 증명서는 인증 (authentication) 시에 서버에 제출됩니다. 이의 예로 패스워드 암호, 비밀키, 디지털 인증서, 지문 등이 있습니다.</p>
+</dd>
+<dt id="term-cross-origin-resource-sharing-cors">자원간 공유 (Cross-Origin Resource Sharing, 이하 CORS)</dt>
+<dd><p class="first last">폰트나 자바스크립트 등과 같이 한 웹페이지상의 자원들이, 이들의 원천 도메인 경계를 넘어 외부 도메인으로부터 요청될 때까지 허용해 주는 방식입니다.</p>
+</dd>
 <dt id="term-crowbar">Crowbar</dt>
-<dd>An open source community project by Dell that aims to provide
-all necessary services to quickly deploy clouds.</dd>
+<dd><p class="first last">신속히 클라우드를 배치하는데 필요한 모든 서비스를 지원하기 위해 델 (Dell)사에서 주도하고 있는 오픈소스 커뮤니티 프로젝트</p>
+</dd>
 <dt id="term-current-workload">current workload</dt>
 <dd>An element of the Compute capacity cache that is calculated
 based on the number of build, snapshot, migrate, and resize operations
 currently in progress on a given host.</dd>
-<dt id="term-customer">customer</dt>
-<dd>Alternative term for tenant.</dd>
-<dt id="term-customization-module">customization module</dt>
-<dd>A user-created Python module that is loaded by horizon to change
-the look and feel of the dashboard.</dd>
-<dt id="term-daemon">daemon</dt>
-<dd>A process that runs in the background and waits for requests.
-May or may not listen on a TCP or UDP port. Do not confuse with a
-worker.</dd>
+<dt id="term-customer">고객</dt>
+<dd><p class="first last">세입자 (tenant) 라는 용어의 다른 표현</p>
+</dd>
+<dt id="term-customization-module">주문제작 모듈</dt>
+<dd><p class="first last">대시보드의 외관과 느낌을 바꾸기 위해 사용되는 사용자가 생성한 Python 모듈</p>
+</dd>
+<dt id="term-daemon">데몬 (디먼)</dt>
+<dd><p class="first last">외부의 요청을 처리하기 위해 백그라운드에서 실행되는 대기 프로세스입니다. TCP 나 UDP 포트를 지속적으로 감시 (리슨) 합니다. 데몬은 워커와 구별됩니다.</p>
+</dd>
 <dt id="term-dac">DAC</dt>
-<dd>Discretionary access control. Governs the ability of subjects to
-access objects, while enabling users to make policy decisions and
-assign security attributes. The traditional UNIX system of users,
-groups, and read-write-execute permissions is an example of
-DAC.</dd>
-<dt id="term-dashboard">dashboard</dt>
-<dd>The web-based management interface for OpenStack. An alternative
-name for horizon.</dd>
-<dt id="term-data-encryption">data encryption</dt>
+<dd><p class="first last">자유재량에 의한 접근 제어 방식. 사용자들이 정책 결정이나 보안 항목들을 지정할 수 있도록  허용할 때, 객체들을 참조하는 방식을 통제합니다.  전통적인 UNIX 시스템에서 사용자와 그룹 들의 읽기-쓰기-실행하기 허용 여부를 지정할 수 있도록 하는 방식이 DAC 의 한 예입니다.</p>
+</dd>
+<dt id="term-dashboard">대시보드</dt>
+<dd><p class="first last">웹 기반 OpenStack 관리 인터페이스. Horizon 의 다른 이름입니다.</p>
+</dd>
+<dt id="term-data-encryption">데이터 암호화</dt>
 <dd>Both Image service and Compute support encrypted virtual machine
 (VM) images (but not instances). In-transit data encryption is
 supported in OpenStack using technologies such as HTTPS, SSL, TLS, and
@@ -1409,13 +1355,15 @@ and key value pairs.</dd>
 <dt id="term-injection">injection</dt>
 <dd>The process of putting a file into a virtual machine image
 before the instance is started.</dd>
-<dt id="term-instance">instance</dt>
-<dd>A running VM, or a VM in a known state such as suspended, that
-can be used like a hardware server.</dd>
-<dt id="term-instance-id">instance ID</dt>
-<dd>Alternative term for instance UUID.</dd>
-<dt id="term-instance-state">instance state</dt>
-<dd>The current state of a guest VM image.</dd>
+<dt id="term-instance">인스턴스</dt>
+<dd><p class="first last">실행중인 VM 또는 중지된 VM 으로 하드웨어 서버처럼 사용될 수 있는 것을 일컬읍니다.</p>
+</dd>
+<dt id="term-instance-id">인스턴스 ID</dt>
+<dd><p class="first last">인스턴스 UUID 의 별칭</p>
+</dd>
+<dt id="term-instance-state">인스턴스 상태</dt>
+<dd><p class="first last">게스트 VM 이미지의 현재 상태</p>
+</dd>
 <dt id="term-instance-tunnels-network">instance tunnels network</dt>
 <dd>A network segment used for instance traffic tunnels
 between compute nodes and the network node.</dd>
@@ -1427,18 +1375,18 @@ and memory. Alternative term for flavor.</dd>
 <dd>Alternative term for a flavor ID.</dd>
 <dt id="term-instance-uuid">instance UUID</dt>
 <dd>Unique ID assigned to each guest VM instance.</dd>
-<dt id="term-interface">interface</dt>
-<dd>A physical or virtual device that provides connectivity
-to another device or medium.</dd>
-<dt id="term-interface-id">interface ID</dt>
-<dd>Unique ID for a Networking VIF or vNIC in the form of a
-UUID.</dd>
-<dt id="term-internet-protocol-ip">Internet protocol (IP)</dt>
-<dd>Principal communications protocol in the internet protocol
-suite for relaying datagrams across network boundaries.</dd>
-<dt id="term-internet-service-provider-isp">Internet Service Provider (ISP)</dt>
-<dd>Any business that provides Internet access to individuals or
-businesses.</dd>
+<dt id="term-interface">인터페이스</dt>
+<dd><p class="first last">다른 디바이스나 미디어에 대한 연결을 제공하는 물리적 또는 가상 디바이스</p>
+</dd>
+<dt id="term-interface-id">인터페이스 ID</dt>
+<dd><p class="first last">네트워킹 VIF 나 vNIC 를 위한 고유 ID</p>
+</dd>
+<dt id="term-internet-protocol-ip">인터넷 프로토콜 (IP)</dt>
+<dd><p class="first last">인터넷 프로토콜 중의 네트워크 경계간 데이터그램의 전달에 필요한 기본 통신 프로토콜</p>
+</dd>
+<dt id="term-internet-service-provider-isp">인터넷 서비스 제공자</dt>
+<dd><p class="first last">개인이나 사업자에게 인터넷 접속을 지원하는 사업</p>
+</dd>
 <dt id="term-internet-small-computer-system-interface-iscsi">Internet Small Computer System Interface (iSCSI)</dt>
 <dd>Storage protocol that encapsulates SCSI frames for transport
 over IP networks.</dd>
@@ -1446,28 +1394,20 @@ over IP networks.</dd>
 <dd>OpenStack project that provisions bare metal, as opposed to
 virtual, machines.</dd>
 <dt id="term-iops">IOPS</dt>
-<dd>IOPS (Input/Output Operations Per Second) are a common
-performance measurement used to benchmark computer storage
-devices like hard disk drives, solid state drives, and
-storage area networks.</dd>
-<dt id="term-ip-address">IP address</dt>
-<dd>Number that is unique to every computer system on the Internet.
-Two versions of the Internet Protocol (IP) are in use for addresses:
-IPv4 and IPv6.</dd>
-<dt id="term-ip-address-management-ipam">IP Address Management (IPAM)</dt>
-<dd>The process of automating IP address allocation, deallocation,
-and management. Currently provided by Compute, melange, and
-Networking.</dd>
+<dd><p class="first last">IOPS (Input/Output Operations Per Second) 는 하드 디스크 드라이브나 솔리드 스테이트 드라이브, 스토리지 에리어 네트워크 등의 컴퓨터 스토리지 장치들의 벤치마크 테스트시 성능 지표로 사용합니다.</p>
+</dd>
+<dt id="term-ip-address">IP 주소</dt>
+<dd><p class="first last">인터넷 상에서의 모든 컴퓨터를 식별하는 고유 번호. 현재 IPv4 와 IPv6 와 같이 두가지 버전의 IP 주소가 사용되고 있습니다.</p>
+</dd>
+<dt id="term-ip-address-management-ipam">IP 주소 관리 (IP Address Management, 이하 IPAM)</dt>
+<dd><p class="first last">IP 주소의 할당, 반환, 관리 등을 자동으로 처리합니다. 현재  Compute, Melange, 및 Networking 에 의해 제공됩니다.</p>
+</dd>
 <dt id="term-ipl">IPL</dt>
-<dd>Initial Program Loader.</dd>
+<dd><p class="first last">초기 프로그램 로더</p>
+</dd>
 <dt id="term-ipmi">IPMI</dt>
-<dd>Intelligent Platform Management Interface. IPMI is a
-standardized computer system interface used by system administrators
-for out-of-band management of computer systems and monitoring of their
-operation. In layman&#8217;s terms, it
-is a way to manage a computer using a direct network connection,
-whether it is turned on or not; connecting to the hardware rather than
-an operating system or login shell.</dd>
+<dd><p class="first last">지능형 플랫폼 관리 인터페이스. IPMI 는 표준화된 컴퓨터 시스템 인터페이스로써 시스템 관리자가 컴퓨터 시스템을 관리하고 이의 조작을 감시할 때 사용합니다. 일반적으로 IPMI 는 시스템의 전원이 꺼져 있거나 켜져 있던지간에 직접 네트워크 연결방식으로 운영체제나 로그인 셸을 거치지 않고 하드웨어에 연결해서 컴퓨터를 관리하게 됩니다.</p>
+</dd>
 <dt id="term-ip6tables">ip6tables</dt>
 <dd>Tool used to set up, maintain, and inspect the tables of IPv6
 packet filter rules in the Linux kernel. In OpenStack Compute,
@@ -1977,19 +1917,18 @@ interface. A flat network interface is controlled by the
 flat_interface with flat managers. A VLAN network interface is
 controlled by the <cite>vlan_interface</cite> option with VLAN
 managers.</dd>
-<dt id="term-project">project</dt>
-<dd>Projects represent the base unit of “ownership” in OpenStack,
-in that all resources in OpenStack should be owned by a specific project.
-In OpenStack Identity, a project must be owned by a specific domain.</dd>
-<dt id="term-project-id">project ID</dt>
-<dd>User-defined alphanumeric string in Compute; the name of a
-project.</dd>
-<dt id="term-project-vpn">project VPN</dt>
-<dd>Alternative term for a cloudpipe.</dd>
-<dt id="term-promiscuous-mode">promiscuous mode</dt>
-<dd>Causes the network interface to pass all traffic it
-receives to the host rather than passing only the frames
-addressed to it.</dd>
+<dt id="term-project">프로젝트</dt>
+<dd><p class="first last">프로젝트는 OpenStack에서 소유권의 기본 단위로써 OpenStack 상의 모든 자원들은 특정 프로젝트에 속해야 합니다. OpenStack Identity 로써 프로젝트는 특정 도메인에 속해야 합니다.</p>
+</dd>
+<dt id="term-project-id">프로젝트 ID</dt>
+<dd><p class="first last">Compute에서의 사용자 정의 문자 및 숫자열로 프로젝트의 이름</p>
+</dd>
+<dt id="term-project-vpn">프로젝트 VPN</dt>
+<dd><p class="first last">클라우드파이프의 별칭</p>
+</dd>
+<dt id="term-promiscuous-mode">방임 모드</dt>
+<dd><p class="first last">네트워크 인터페이스가 어떤 호스트로 하여금 특별히 그 호스트로 보내진 것 뿐만 아니라 수령한 모든 트래픽을 통과시키도록 합니다.</p>
+</dd>
 <dt id="term-protected-property">protected property</dt>
 <dd>Generally, extra properties on an Image service image to
 which only cloud administrators have access. Limits which user
@@ -2670,15 +2609,14 @@ the Xen Storage Manager API.</dd>
 <dt id="term-xenserver">XenServer</dt>
 <dd>An OpenStack-supported hypervisor.</dd>
 <dt id="term-xfs">XFS</dt>
-<dd>High-performance 64-bit file system created by Silicon
-Graphics. Excels in parallel I/O operations and data
-consistency.</dd>
+<dd><p class="first last">Silicon Graphics에서 만든 고 가용성 64비트 파일 시스템입니다. 병렬 IO 작업과 데이터 일관성이 뛰어납니다.</p>
+</dd>
 <dt id="term-zaqar">zaqar</dt>
-<dd>OpenStack project that provides a message service to
-applications.</dd>
+<dd><p class="first last">어플리케이션에서 메시지 서비스를 제공하는 OpenStack 프로젝트입니다.</p>
+</dd>
 <dt id="term-zeromq">ZeroMQ</dt>
-<dd>Message queue software supported by OpenStack. An alternative to
-RabbitMQ. Also spelled 0MQ.</dd>
+<dd><p class="first last">OpenStack에서 지원하는 메시지 큐 소프트웨어입니다. RabbitMQ 대안으로 사용 가능합니다. 0MQ로 나타내기도 합니다.</p>
+</dd>
 <dt id="term-zuul">Zuul</dt>
 <dd>Tool used in OpenStack development to ensure correctly ordered
 testing of changes in parallel.</dd>
@@ -2697,7 +2635,7 @@ testing of changes in parallel.</dd>
             <a id="logABugLink3" href="" target="_blank" title="Found an error? Report a bug against this page"><i class="fa fa-bug" data-toggle="tooltip" data-placement="top" title="Report a Bug"></i></a>
           </div>
           <div class="row docs-byline bottom">
-            <div class="docs-updated">updated: 2016-01-10 10:51</div>
+            <div class="docs-updated">updated: 2016-01-16 01:29</div>
           </div>
           <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-8 docs-license">
@@ -2751,7 +2689,7 @@ testing of changes in parallel.</dd>
     <div class="docs-sidebar-section" id="table-of-contents">
       <a href="../index.html" class="docs-sidebar-section-title"><h4>내용</h4></a>
       <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="conventions.html">통용 규칙</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conventions.html">문서에서 사용하는 규칙</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../overview.html">개요</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../environment.html">환경</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../keystone.html">Identity 서비스 추가</a></li>
@@ -2765,7 +2703,7 @@ testing of changes in parallel.</dd>
 <li class="toctree-l1"><a class="reference internal" href="../ceilometer.html">Telemetry 서비스 추가</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../launch-instance.html">인스턴스 실행</a></li>
 <li class="toctree-l1"><a class="reference internal" href="app_support.html">커뮤니티 지원</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Glossary</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">용어집</a></li>
 </ul>
 
     </div>
@@ -2876,15 +2814,15 @@ testing of changes in parallel.</dd>
         gitURL = "Source: http://git.openstack.org/cgit/openstack/openstack-manuals/tree/doc/install-guide/source" + "/" + sourceFile;
 
     /* gitsha, project and bug_tag rely on variables in conf.py */
-    var gitSha = "SHA: bafa0de0ca68a7c497cadd768a7572cf29b090fe";
+    var gitSha = "SHA: ab79de9486175687ee6205ccce4c8f7598c89032";
         var bugProject = "openstack-manuals";
-    var bugTitle = "Glossary in Installation Guide";
+    var bugTitle = "용어집 in Installation Guide";
     var fieldTags = "install-guide";
 
     /* "last_updated" is the build date and time. It relies on the
        conf.py variable "html_last_updated_fmt", which should include
        year/month/day as well as hours and minutes                   */
-    var buildstring = "Release: 0.1 on 2016-01-10 10:51";
+    var buildstring = "Release: 0.1 on 2016-01-16 01:29";
 
     var fieldComment = encodeURI(buildstring) +
                        lineFeed + encodeURI(gitSha) +

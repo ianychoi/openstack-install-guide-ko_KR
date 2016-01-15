@@ -153,7 +153,7 @@ ga('send', 'pageview');
   </div>
   <div class="docs-actions">
     
-    <a href="common/conventions.html"><i class="fa fa-angle-double-left" data-toggle="tooltip" data-placement="top" title="Previous: 통용 규칙"></i></a>
+    <a href="common/conventions.html"><i class="fa fa-angle-double-left" data-toggle="tooltip" data-placement="top" title="Previous: 문서에서 사용하는 규칙"></i></a>
     
     
     <a href="environment.html"><i class="fa fa-angle-double-right" data-toggle="tooltip" data-placement="top" title="Next: 환경"></i></a>
@@ -162,7 +162,7 @@ ga('send', 'pageview');
   </div>
 </div>
           <div class="row docs-byline">
-            <div class="docs-updated">updated: 2016-01-10 10:51</div>
+            <div class="docs-updated">updated: 2016-01-16 01:29</div>
           </div>
           <div class="row">
             <div class="col-lg-12">
@@ -192,7 +192,7 @@ ga('send', 'pageview');
   <div class="section" id="overview">
 <h1>개요<a class="headerlink" href="#overview" title="제목 주소">¶</a></h1>
 <p><a class="reference internal" href="common/glossary.html#term-openstack"><em class="xref std std-term">OpenStack</em></a> 프로젝트는 클라우드 환경에대한 모든 타입을 지원하는 오픈소스 클라우드 컴퓨팅 플랫폼입니다.  이 프로젝트는 간단한 구현, 대규모 확장, 다양한 기능에대해 목표로 움직입니다. 전 세계 클라우드 전문가들이 프로젝트에 기여합니다.</p>
-<p>OpenStack은 서로 보완하는 다양한 서비스를 통하여 <a class="reference internal" href="common/glossary.html#term-iaas"><em class="xref std std-term">Infrastructure-as-a-Service (IaaS)</em></a> 솔루션을 제공합니다. :term:<a href="#id1"><span class="problematic" id="id2">`</span></a>application programming interface (API)&lt;API&gt;`를 이용하여 각 서비스 통합을 용의하게 구성합니다.</p>
+<p>OpenStack은 서로 보완하는 다양한 서비스를 통하여 <a class="reference internal" href="common/glossary.html#term-iaas"><em class="xref std std-term">Infrastructure-as-a-Service (IaaS)</em></a> 솔루션을 제공합니다. <a class="reference internal" href="common/glossary.html#term-api"><em class="xref std std-term">application programming interface (API)</em></a> 를 이용하여 각 서비스 통합을 쉽게 구성합니다.</p>
 <p>이 가이드는 리눅스 경험이 있는 OpenStack의 새로운 사용자에게 적합한 기능 예제 아키텍처를 사용하여 다음 과 같은 주요 OpenStack 서비스들을 단계별로 배포하는 것을 다룹니다:</p>
 <table border="1" class="docutils" id="openstack">
 <caption><span class="caption-text"><strong>OpenStack 서비스</strong></span><a class="headerlink" href="#openstack" title="Permalink to this table">¶</a></caption>
@@ -274,26 +274,26 @@ ga('send', 'pageview');
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>OpenStack 서비스의 기본 설치, 구성, 운용, 문제 해결에 익숙해진 후 제품에서 사용할 아키텍처를 사용하여 배포할 수 있는 다음 단계를 고려해야합니다:</p>
+<p>OpenStack 서비스의 기본 설치, 구성, 운용, 문제 해결에 익숙해진 후 Production에서 사용할 아키텍처를 사용하여 배포할 수 있는 다음 단계를 고려해야합니다:</p>
 <ul class="simple">
 <li><p class="first">성능과 중복 요구사항을 충족하도록 필요한 코어와 부가 서비스를 결정하고 구현합니다.</p>
 </li>
 <li><p class="first">방화벽, 암호화, 서비스 정책 등의 방법을 사용하여 보안을 강화시킵니다.</p>
 </li>
-<li><p class="first">자동 배포와 제품 환경 관리를 위해 Ansible, Chef, Puppet, Salt와 같은 배포 툴을 사용합니다.</p>
+<li><p class="first">자동 배포와 Production 환경 관리를 위해 Ansible, Chef, Puppet, Salt와 같은 배포 툴을 사용합니다.</p>
 </li>
 </ul>
 <div class="section" id="example-architecture">
 <span id="overview-example-architectures"></span><h2>예제 구성도<a class="headerlink" href="#example-architecture" title="제목 주소">¶</a></h2>
 <p>예제 아키텍처에서는 기본 <a class="reference internal" href="common/glossary.html#term-virtual-machine-vm"><em class="xref std std-term">virtual machine</em></a> 또는 인스턴스를 작동할 수 있는 최소 두 노드 (호스트)가 필요합니다. 추가로 블록 스토리지와 오브젝트 스토리지를 구성하기 위해선 추가 노드가 필요합니다.</p>
-<p>다음과 같이 예제 아키텍처는 최소한의 제품 아키텍처와는 다릅니다:</p>
+<p>다음과 같이 예제 아키텍처는 최소한의 Production 아키텍처와는 다릅니다:</p>
 <ul class="simple">
 <li><p class="first">네트워킹 에이전트는 최소 하나 이상의 네트워크 노드가 아닌 컨트롤러 노드 상에 상주합니다.</p>
 </li>
 <li><p class="first">사설 네트워크를 오버레이 (터널) 트래픽 대신 전용 네트워크의 관리 네트워크를 이용하여 통신합니다.</p>
 </li>
 </ul>
-<p>제품 아키텍처에 대한 자세한 정보는 <a class="reference external" href="http://docs.openstack.org/arch-design/content/">Architecture Design Guide</a>, <a class="reference external" href="http://docs.openstack.org/ops/">Operations Guide</a>, <a class="reference external" href="http://docs.openstack.org/networking-guide/">Networking Guide</a> 를 확인하십시오.</p>
+<p>Production 아키테처에 대한 더 많은 정보는 <a class="reference external" href="http://docs.openstack.org/arch-design/content/">Architecture Design Guide</a>, <a class="reference external" href="http://docs.openstack.org/ops/">Operations Guide</a>, and <a class="reference external" href="http://docs.openstack.org/liberty/networking-guide/">Networking Guide</a>. 를 보시오</p>
 <div class="figure" id="id5">
 <span id="figure-hwreqs"></span><img alt="Hardware requirements" src="../images/hwreqs.png" />
 <p class="caption"><span class="caption-text"><strong>하드웨어 요구사항</strong></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
@@ -352,7 +352,7 @@ ga('send', 'pageview');
           </div>
           <div class="docs-actions">
           
-            <a href="common/conventions.html"><i class="fa fa-angle-double-left" data-toggle="tooltip" data-placement="top" title="Previous: 통용 규칙"></i></a>
+            <a href="common/conventions.html"><i class="fa fa-angle-double-left" data-toggle="tooltip" data-placement="top" title="Previous: 문서에서 사용하는 규칙"></i></a>
           
           
             <a href="environment.html"><i class="fa fa-angle-double-right" data-toggle="tooltip" data-placement="top" title="Next: 환경"></i></a>
@@ -360,7 +360,7 @@ ga('send', 'pageview');
             <a id="logABugLink3" href="" target="_blank" title="Found an error? Report a bug against this page"><i class="fa fa-bug" data-toggle="tooltip" data-placement="top" title="Report a Bug"></i></a>
           </div>
           <div class="row docs-byline bottom">
-            <div class="docs-updated">updated: 2016-01-10 10:51</div>
+            <div class="docs-updated">updated: 2016-01-16 01:29</div>
           </div>
           <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-8 docs-license">
@@ -414,7 +414,7 @@ ga('send', 'pageview');
     <div class="docs-sidebar-section" id="table-of-contents">
       <a href="index.html" class="docs-sidebar-section-title"><h4>내용</h4></a>
       <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="common/conventions.html">통용 규칙</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/conventions.html">문서에서 사용하는 규칙</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">개요</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#example-architecture">예제 구성도</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id4">네트워킹</a></li>
@@ -432,7 +432,7 @@ ga('send', 'pageview');
 <li class="toctree-l1"><a class="reference internal" href="ceilometer.html">Telemetry 서비스 추가</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launch-instance.html">인스턴스 실행</a></li>
 <li class="toctree-l1"><a class="reference internal" href="common/app_support.html">커뮤니티 지원</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/glossary.html">용어집</a></li>
 </ul>
 
     </div>
@@ -543,7 +543,7 @@ ga('send', 'pageview');
         gitURL = "Source: http://git.openstack.org/cgit/openstack/openstack-manuals/tree/doc/install-guide/source" + "/" + sourceFile;
 
     /* gitsha, project and bug_tag rely on variables in conf.py */
-    var gitSha = "SHA: bafa0de0ca68a7c497cadd768a7572cf29b090fe";
+    var gitSha = "SHA: ab79de9486175687ee6205ccce4c8f7598c89032";
         var bugProject = "openstack-manuals";
     var bugTitle = "개요 in Installation Guide";
     var fieldTags = "install-guide";
@@ -551,7 +551,7 @@ ga('send', 'pageview');
     /* "last_updated" is the build date and time. It relies on the
        conf.py variable "html_last_updated_fmt", which should include
        year/month/day as well as hours and minutes                   */
-    var buildstring = "Release: 0.1 on 2016-01-10 10:51";
+    var buildstring = "Release: 0.1 on 2016-01-16 01:29";
 
     var fieldComment = encodeURI(buildstring) +
                        lineFeed + encodeURI(gitSha) +

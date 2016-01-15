@@ -162,7 +162,7 @@ ga('send', 'pageview');
   </div>
 </div>
           <div class="row docs-byline">
-            <div class="docs-updated">updated: 2016-01-10 10:51</div>
+            <div class="docs-updated">updated: 2016-01-16 01:29</div>
           </div>
           <div class="row">
             <div class="col-lg-12">
@@ -202,7 +202,7 @@ ga('send', 'pageview');
 <ul>
 <li><p class="first"><code class="docutils literal"><span class="pre">/etc/neutron/neutron.conf</span></code> 파일을 수정하고 다음 작업을 완료합니다:</p>
 <ul>
-<li><p class="first"><code class="docutils literal"><span class="pre">[database]</span></code> 섹션에서, 데이터베이스 액세스를 구성합니다:</p>
+<li><p class="first"><code class="docutils literal"><span class="pre">[database]</span></code> 섹션에서 데이터베이스 액세스를 구성합니다:</p>
 <div class="highlight-ini"><div class="highlight"><pre>[database]
 ...
 connection = mysql://neutron:NEUTRON_DBPASS@controller/neutron
@@ -232,7 +232,7 @@ rabbit_password = RABBIT_PASS
 </div>
 <p>RabbitMQ의 <code class="docutils literal"><span class="pre">openstack</span></code> 계정의 암호로 <code class="docutils literal"><span class="pre">RABBIT_PASS</span></code> 를 변경합니다.</p>
 </li>
-<li><p class="first"><code class="docutils literal"><span class="pre">[DEFAULT]</span></code> 및 <code class="docutils literal"><span class="pre">[keystone_authtoken]</span></code> 섹션에서는, Identity 서비스 액세스를 구성합니다:</p>
+<li><p class="first"><code class="docutils literal"><span class="pre">[DEFAULT]</span></code> 와 <code class="docutils literal"><span class="pre">[keystone_authtoken]</span></code> 섹션에서 Identity 서비스 접근을 구성합니다:</p>
 <div class="highlight-ini"><div class="highlight"><pre>[DEFAULT]
 ...
 auth_strategy = keystone
@@ -252,7 +252,7 @@ password = NEUTRON_PASS
 <p>Identity 서비스에서 <code class="docutils literal"><span class="pre">neutron</span></code> 사용자의 암호로 <code class="docutils literal"><span class="pre">NEUTRON_PASS</span></code> 를 변경합니다.</p>
 <div class="admonition note">
 <p class="first admonition-title">주석</p>
-<p class="last"><code class="docutils literal"><span class="pre">[keystone_authtoken]</span></code> 섹션 내 다른 옵션들을 주석 처리 또는 제거합니다.</p>
+<p class="last"><code class="docutils literal"><span class="pre">[keystone_authtoken]</span></code> 섹션 내 다른 옵션들은 주석 처리나 제거합니다.</p>
 </div>
 </li>
 <li><p class="first"><code class="docutils literal"><span class="pre">[DEFAULT]</span></code> 및 <code class="docutils literal"><span class="pre">[nova]</span></code> 섹션에서, 네트워크 토폴로지 변경이 발생했을 때 Compute에 알려주도록 네트워킹을 구성합니다:</p>
@@ -278,7 +278,7 @@ password = NOVA_PASS
 </li>
 </ul>
 <ul>
-<li><p class="first"><code class="docutils literal"><span class="pre">[oslo_concurrency]</span></code> 섹션에서, lock 경로를 구성합니다:</p>
+<li><p class="first"><code class="docutils literal"><span class="pre">[oslo_concurrency]</span></code> 섹션에서 lock 경로를 구성합니다:</p>
 <div class="highlight-ini"><div class="highlight"><pre>[oslo_concurrency]
 ...
 lock_path = /var/lib/neutron/tmp
@@ -358,7 +358,8 @@ enable_ipset = True
 <h2>리눅스 브릿지 에이전트 구성<a class="headerlink" href="#configure-the-linux-bridge-agent" title="제목 주소">¶</a></h2>
 <p>리눅스 브릿지 에이전트는 사설 네트워크 상의 VXLAN 터널링을 포함하는 인스턴스에 대한 layer-2(브릿징과 스위칭) 가상 네트워킹 인프라를 구축하고 시큐리티 그룹을 처리합니다.</p>
 <ul>
-<li><p class="first"><a href="#id1"><span class="problematic" id="id2">``</span></a>/etc/neutron/plugins/ml2/linuxbridge_agent.ini``파일을 수정하고 다음 작업을 완료합니다:</p>
+<li><p class="first">Edit the <code class="docutils literal"><span class="pre">/etc/neutron/plugins/ml2/linuxbridge_agent.ini</span></code> file and
+complete the following actions:</p>
 <ul>
 <li><p class="first"><code class="docutils literal"><span class="pre">[linux_bridge]</span></code> 섹션에서, 공용 물리 네트워크 인터페이스에 공용 가상 네트워크를 매핑합니다:</p>
 <div class="highlight-ini"><div class="highlight"><pre><span class="k">[linux_bridge]</span>
@@ -435,7 +436,7 @@ verbose = True
             <a id="logABugLink3" href="" target="_blank" title="Found an error? Report a bug against this page"><i class="fa fa-bug" data-toggle="tooltip" data-placement="top" title="Report a Bug"></i></a>
           </div>
           <div class="row docs-byline bottom">
-            <div class="docs-updated">updated: 2016-01-10 10:51</div>
+            <div class="docs-updated">updated: 2016-01-16 01:29</div>
           </div>
           <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-8 docs-license">
@@ -489,7 +490,7 @@ verbose = True
     <div class="docs-sidebar-section" id="table-of-contents">
       <a href="index.html" class="docs-sidebar-section-title"><h4>내용</h4></a>
       <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="common/conventions.html">통용 규칙</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/conventions.html">문서에서 사용하는 규칙</a></li>
 <li class="toctree-l1"><a class="reference internal" href="overview.html">개요</a></li>
 <li class="toctree-l1"><a class="reference internal" href="environment.html">환경</a></li>
 <li class="toctree-l1"><a class="reference internal" href="keystone.html">Identity 서비스 추가</a></li>
@@ -511,7 +512,7 @@ verbose = True
 <li class="toctree-l1"><a class="reference internal" href="ceilometer.html">Telemetry 서비스 추가</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launch-instance.html">인스턴스 실행</a></li>
 <li class="toctree-l1"><a class="reference internal" href="common/app_support.html">커뮤니티 지원</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/glossary.html">용어집</a></li>
 </ul>
 
     </div>
@@ -622,7 +623,7 @@ verbose = True
         gitURL = "Source: http://git.openstack.org/cgit/openstack/openstack-manuals/tree/doc/install-guide/source" + "/" + sourceFile;
 
     /* gitsha, project and bug_tag rely on variables in conf.py */
-    var gitSha = "SHA: bafa0de0ca68a7c497cadd768a7572cf29b090fe";
+    var gitSha = "SHA: ab79de9486175687ee6205ccce4c8f7598c89032";
         var bugProject = "openstack-manuals";
     var bugTitle = "네트워킹 옵션 1: 프로바이더 네트워크 in Installation Guide";
     var fieldTags = "install-guide";
@@ -630,7 +631,7 @@ verbose = True
     /* "last_updated" is the build date and time. It relies on the
        conf.py variable "html_last_updated_fmt", which should include
        year/month/day as well as hours and minutes                   */
-    var buildstring = "Release: 0.1 on 2016-01-10 10:51";
+    var buildstring = "Release: 0.1 on 2016-01-16 01:29";
 
     var fieldComment = encodeURI(buildstring) +
                        lineFeed + encodeURI(gitSha) +
